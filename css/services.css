@@ -819,3 +819,285 @@
     text-shadow: 0 2px 16px rgba(0, 0, 0, 0.38) !important;
 }
 
+/* =========================
+   IMPROVEMENT CARDS — TABLET / MOBILE COMPACT
+   icon top-right, lower card height
+========================= */
+
+@media (max-width: 1180px) {
+    .improvement-card {
+        position: relative !important;
+        min-height: 220px !important;
+        padding: 24px !important;
+    }
+
+    .improvement-card>svg {
+        position: absolute !important;
+        top: 24px !important;
+        right: 24px !important;
+        margin-bottom: 0 !important;
+        z-index: 2 !important;
+    }
+
+    .improvement-card h3 {
+        padding-right: 58px !important;
+        margin-top: 0 !important;
+        margin-bottom: 10px !important;
+    }
+
+    .improvement-card p {
+        padding-right: 0 !important;
+    }
+}
+
+@media (max-width: 760px) {
+    .improvement-card {
+        min-height: 175px !important;
+        padding: 22px 20px !important;
+    }
+
+    .improvement-card>svg {
+        top: 22px !important;
+        right: 20px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .improvement-card h3 {
+        padding-right: 52px !important;
+        margin-bottom: 9px !important;
+    }
+
+    .improvement-card p {
+        font-size: 0.94rem !important;
+        line-height: 1.62 !important;
+    }
+}
+
+@media (max-width: 520px) {
+    .improvement-card {
+        min-height: 155px !important;
+        padding: 20px 18px !important;
+    }
+
+    .improvement-card>svg {
+        top: 20px !important;
+        right: 18px !important;
+    }
+
+    .improvement-card h3 {
+        padding-right: 46px !important;
+    }
+}
+/* =========================
+   GLOBAL SECTION KICKER — SAME AS HOME PAGE
+   for all service pages
+========================= */
+
+.section-kicker {
+    position: relative !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    width: fit-content !important;
+    margin-bottom: 18px !important;
+    padding: 0 0 11px 16px !important;
+    color: inherit !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    font-size: 0.74rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.18em !important;
+    line-height: 1 !important;
+    text-transform: uppercase !important;
+}
+
+/* левая вертикальная линия */
+.section-kicker::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: -2px !important;
+    width: 3px !important;
+    height: 22px !important;
+    border-radius: 999px !important;
+    background: var(--color-accent) !important;
+    box-shadow: 0 0 18px rgba(255, 231, 97, 0.44) !important;
+    opacity: 1 !important;
+}
+
+/* нижняя линия */
+.section-kicker::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 16px !important;
+    bottom: 0 !important;
+    width: 74px !important;
+    height: 2px !important;
+    border-radius: 999px !important;
+    background: linear-gradient(90deg,
+            var(--color-accent),
+            rgba(255, 231, 97, 0)) !important;
+}
+
+/* светлые секции */
+.section--light .section-kicker,
+.section--ivory .section-kicker,
+.service-overview .section-kicker,
+.service-matters .section-kicker,
+.service-deliverables .section-kicker,
+.service-faq .section-kicker {
+    color: #171915 !important;
+}
+
+/* тёмные секции */
+.section--dark .section-kicker,
+.section--deep .section-kicker,
+.page-hero .section-kicker,
+.service-hero .section-kicker,
+.service-improves .section-kicker,
+.service-method .section-kicker,
+.service-promise .section-kicker {
+    color: #F8F6EF !important;
+}
+
+/* если kicker внутри светлого блока, даже если сама секция тёмная */
+.related-services .section-kicker {
+    color: #171915 !important;
+}
+
+/* mobile */
+@media (max-width: 760px) {
+    .section-kicker {
+        margin-bottom: 16px !important;
+        font-size: 0.7rem !important;
+        letter-spacing: 0.15em !important;
+    }
+
+    .section-kicker::before {
+        height: 20px !important;
+    }
+
+    .section-kicker::after {
+        width: 64px !important;
+    }
+}
+
+/* =========================
+   SERVICE FAQ — HOVERS WITHOUT YELLOW
+========================= */
+
+/* FAQ items */
+.service-faq .faq-item {
+    position: relative !important;
+    overflow: hidden !important;
+    border-color: rgba(20, 24, 18, 0.14) !important;
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        background var(--transition-base),
+        box-shadow var(--transition-base) !important;
+}
+
+.service-faq .faq-item::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    background:
+        linear-gradient(135deg,
+            rgba(255, 255, 255, 0.72),
+            rgba(255, 255, 255, 0.24)),
+        radial-gradient(circle at 92% 18%,
+            rgba(20, 24, 18, 0.055),
+            transparent 18rem) !important;
+    transition: opacity var(--transition-base) !important;
+}
+
+.service-faq .faq-item:hover,
+.service-faq .faq-item.is-open {
+    transform: translateY(-3px) !important;
+    border-color: rgba(20, 24, 18, 0.24) !important;
+    background: rgba(255, 255, 255, 0.72) !important;
+    box-shadow:
+        0 18px 44px rgba(20, 24, 18, 0.09),
+        inset 0 1px 0 rgba(255, 255, 255, 0.72) !important;
+}
+
+.service-faq .faq-item:hover::before,
+.service-faq .faq-item.is-open::before {
+    opacity: 1 !important;
+}
+
+.service-faq .faq-button,
+.service-faq .faq-panel {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.service-faq .faq-item:hover .faq-question,
+.service-faq .faq-item.is-open .faq-question {
+    color: #171915 !important;
+}
+
+/* icon hover without yellow */
+.service-faq .faq-icon {
+    transition:
+        transform var(--transition-base),
+        background var(--transition-base),
+        border-color var(--transition-base),
+        box-shadow var(--transition-base) !important;
+}
+
+.service-faq .faq-item:hover .faq-icon,
+.service-faq .faq-item.is-open .faq-icon {
+    background: rgba(20, 24, 18, 0.08) !important;
+    border-color: rgba(20, 24, 18, 0.22) !important;
+    box-shadow: 0 10px 24px rgba(20, 24, 18, 0.1) !important;
+}
+
+/* Related services card */
+.service-faq .related-services {
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        box-shadow var(--transition-base),
+        background var(--transition-base) !important;
+}
+
+.service-faq .related-services:hover {
+    transform: translateY(-4px) !important;
+    border-color: rgba(20, 24, 18, 0.2) !important;
+    background:
+        linear-gradient(145deg,
+            rgba(255, 255, 255, 0.92),
+            rgba(255, 255, 255, 0.58)) !important;
+    box-shadow:
+        0 28px 72px rgba(20, 24, 18, 0.14),
+        inset 0 1px 0 rgba(255, 255, 255, 0.74) !important;
+}
+
+/* Related links hover without yellow */
+.service-faq .related-services__links a {
+    transition:
+        color var(--transition-base),
+        padding-left var(--transition-base),
+        border-color var(--transition-base) !important;
+}
+
+.service-faq .related-services__links a:hover {
+    color: #171915 !important;
+    padding-left: 8px !important;
+    border-color: rgba(20, 24, 18, 0.22) !important;
+}
+
+.service-faq .related-services__links a:hover svg {
+    color: #171915 !important;
+    transform: translateX(5px) !important;
+}
+
+/* button inside related card */
+.service-faq .related-services .btn:hover {
+    box-shadow: 0 18px 38px rgba(20, 24, 18, 0.16) !important;
+}
