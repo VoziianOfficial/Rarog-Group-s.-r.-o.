@@ -5027,3 +5027,40 @@ body.menu-open {
         line-height: 1.04 !important;
     }
 }
+
+/* =========================
+   SERVICE CARDS — BRIGHTER BACKGROUND PHOTOS
+========================= */
+
+/* делаем фото в карточках светлее и виднее */
+.service-card::after {
+    background:
+        linear-gradient(180deg,
+            rgba(5, 6, 5, 0.18) 0%,
+            rgba(5, 6, 5, 0.46) 48%,
+            rgba(5, 6, 5, 0.78) 100%),
+        linear-gradient(90deg,
+            rgba(5, 6, 5, 0.48) 0%,
+            rgba(5, 6, 5, 0.18) 58%,
+            rgba(5, 6, 5, 0.38) 100%),
+        var(--service-card-bg) !important;
+
+    background-size: cover !important;
+    background-position: var(--service-card-position, center) !important;
+    filter: brightness(1.18) saturate(1.12) contrast(1.03) !important;
+}
+
+/* активная карточка — ещё чуть выразительнее */
+.service-card.swiper-slide-active::after {
+    filter: brightness(1.26) saturate(1.16) contrast(1.04) !important;
+}
+
+/* next карточка тоже ярче, чтобы не была мутной */
+.service-card.swiper-slide-next::after {
+    filter: brightness(1.22) saturate(1.14) contrast(1.04) !important;
+}
+
+/* при hover фото не затемняется, а становится сочнее */
+.service-card:hover::after {
+    filter: brightness(1.3) saturate(1.18) contrast(1.06) !important;
+}
