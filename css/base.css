@@ -716,7 +716,7 @@ section[id],
     border: 1px solid var(--color-border-dark);
     border-radius: 24px;
     background:
-        linear-gradient(145deg, rgba(32, 37, 27, 0.96), rgba(11, 13, 10, 0.97));
+        linear-gradient(145deg, rgba(31, 31, 26, 0.96), rgba(11, 13, 10, 0.97));
     box-shadow: 0 28px 75px rgba(0, 0, 0, 0.38);
     backdrop-filter: blur(22px);
     transition:
@@ -849,7 +849,7 @@ section[id],
     color: var(--color-text-light);
     background:
         radial-gradient(circle at top right, rgba(255, 231, 97, 0.13), transparent 28rem),
-        linear-gradient(145deg, rgba(18, 22, 15, 0.98), rgba(5, 6, 5, 0.99));
+        linear-gradient(145deg, rgba(18, 18, 15, 0.98), rgba(5, 6, 5, 0.99));
     transition:
         opacity var(--transition-slow),
         visibility var(--transition-slow),
@@ -1361,7 +1361,7 @@ section[id],
     border: 1px solid var(--color-border-dark);
     border-radius: 24px;
     background:
-        linear-gradient(145deg, rgba(32, 37, 27, 0.97), rgba(5, 6, 5, 0.98));
+        linear-gradient(145deg, rgba(31, 31, 26, 0.97), rgba(5, 6, 5, 0.98));
     box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
     backdrop-filter: blur(22px);
     transition:
