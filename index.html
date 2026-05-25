@@ -802,67 +802,143 @@
     </div>
 </section>
 
-            <!-- =========================
-        8. APPROACH
-      ========================== -->
-            <section class="section section--dark home-approach" id="approach" data-section="approach">
-                <div class="container">
-                    <div class="home-approach__grid">
-                        <div class="home-approach__content">
-                            <p class="section-kicker">Performance framework</p>
+<!-- =========================
+  8. APPROACH / STRATEGY LENS
+========================== -->
+<section class="section section--dark approach-lens" id="approach" data-section="approach">
+    <div class="container">
+        <div class="approach-lens__top">
+            <p class="section-kicker">Performance framework</p>
 
-                            <h2 class="section-title">
-                                Built around signals that help marketing become easier to read.
-                            </h2>
+            <h2 class="section-title">
+                Choose the signal. Read the next marketing move.
+            </h2>
 
-                            <p class="section-text">
-                                Rarog Group focuses on the connection between visibility, message, page experience,
-                                and action. The goal is not to create noise, but to make each channel easier to
-                                measure, understand, and improve.
-                            </p>
+            <p class="section-text">
+                Rarog Group uses a practical decision lens to understand what should be improved first:
+                attention, message clarity, page experience, or ongoing refinement.
+            </p>
+        </div>
 
-                            <div class="home-approach__signals">
-                                <div class="home-approach__signal">
-                                    <span>01</span>
-                                    <strong>Intent</strong>
-                                    <p>What the audience is searching for, comparing, or ready to act on.</p>
-                                </div>
+        <div class="approach-lens__shell">
+            <div class="approach-lens__tabs" role="tablist" aria-label="Marketing decision lens">
+                <button class="approach-lens__tab is-active" type="button" role="tab" aria-selected="true"
+                    data-approach-tab="intent">
+                    <i data-lucide="radar" aria-hidden="true"></i>
+                    <span>Intent</span>
+                </button>
 
-                                <div class="home-approach__signal">
-                                    <span>02</span>
-                                    <strong>Message</strong>
-                                    <p>How clearly the offer, value, and next step are communicated.</p>
-                                </div>
+                <button class="approach-lens__tab" type="button" role="tab" aria-selected="false"
+                    data-approach-tab="message">
+                    <i data-lucide="message-square-text" aria-hidden="true"></i>
+                    <span>Message</span>
+                </button>
 
-                                <div class="home-approach__signal">
-                                    <span>03</span>
-                                    <strong>Path</strong>
-                                    <p>How smoothly users move from attention to contact or conversion.</p>
-                                </div>
-                            </div>
+                <button class="approach-lens__tab" type="button" role="tab" aria-selected="false"
+                    data-approach-tab="experience">
+                    <i data-lucide="layout-dashboard" aria-hidden="true"></i>
+                    <span>Experience</span>
+                </button>
 
-                            <a class="btn btn-primary" href="#contact">
-                                Start a conversation
-                                <i data-lucide="arrow-right" aria-hidden="true"></i>
-                            </a>
-                        </div>
+                <button class="approach-lens__tab" type="button" role="tab" aria-selected="false"
+                    data-approach-tab="refinement">
+                    <i data-lucide="sliders-horizontal" aria-hidden="true"></i>
+                    <span>Refinement</span>
+                </button>
+            </div>
 
-                        <div class="home-approach__media">
-                            <img src="./assets/images/home-approach.jpg"
-                                alt="Marketing team analyzing performance charts and campaign strategy" width="900"
-                                height="1050" />
+            <div class="approach-lens__stage">
+                <article class="approach-lens__panel is-active" data-approach-panel="intent">
+                    <div class="approach-lens__word">Intent</div>
 
-                            <div class="home-approach__note">
-                                <i data-lucide="check-check" aria-hidden="true"></i>
-                                <p>
-                                    No guaranteed rankings, revenue, or leads. Clearer structure, stronger signals,
-                                    and continuous optimization.
-                                </p>
-                            </div>
+                    <div class="approach-lens__content">
+                        <p class="approach-lens__eyebrow">Audience signal</p>
+                        <h3>Understand what people are already trying to solve.</h3>
+                        <p>
+                            The first layer is not design or ads. It is the real search behavior,
+                            comparison pressure, questions, objections, and decision moments behind the audience.
+                        </p>
+
+                        <div class="approach-lens__points">
+                            <span>Search demand</span>
+                            <span>Decision readiness</span>
+                            <span>Audience questions</span>
                         </div>
                     </div>
-                </div>
-            </section>
+                </article>
+
+                <article class="approach-lens__panel" data-approach-panel="message" hidden>
+                    <div class="approach-lens__word">Message</div>
+
+                    <div class="approach-lens__content">
+                        <p class="approach-lens__eyebrow">Clarity signal</p>
+                        <h3>Make the offer easy to understand before asking for action.</h3>
+                        <p>
+                            Clear marketing explains value quickly. Rarog Group looks at how the offer is framed,
+                            what users see first, and whether the next step feels natural.
+                        </p>
+
+                        <div class="approach-lens__points">
+                            <span>Offer hierarchy</span>
+                            <span>Trust cues</span>
+                            <span>Clear next step</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="approach-lens__panel" data-approach-panel="experience" hidden>
+                    <div class="approach-lens__word">Experience</div>
+
+                    <div class="approach-lens__content">
+                        <p class="approach-lens__eyebrow">Page signal</p>
+                        <h3>Shape the page so attention turns into movement.</h3>
+                        <p>
+                            Campaigns create attention, but the website decides how that attention moves.
+                            Layout rhythm, CTA placement, form clarity, and friction points matter.
+                        </p>
+
+                        <div class="approach-lens__points">
+                            <span>Landing flow</span>
+                            <span>CTA visibility</span>
+                            <span>Reduced friction</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="approach-lens__panel" data-approach-panel="refinement" hidden>
+                    <div class="approach-lens__word">Refine</div>
+
+                    <div class="approach-lens__content">
+                        <p class="approach-lens__eyebrow">Optimization signal</p>
+                        <h3>Use performance signals to decide what changes next.</h3>
+                        <p>
+                            Instead of random updates, the system helps identify whether the weak point is visibility,
+                            message clarity, page flow, or conversion confidence.
+                        </p>
+
+                        <div class="approach-lens__points">
+                            <span>Signal review</span>
+                            <span>Priority fixes</span>
+                            <span>Ongoing improvement</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="approach-lens__footer">
+            <p>
+                No guaranteed rankings, revenue, or leads — only clearer structure, stronger signals,
+                and more intentional optimization.
+            </p>
+
+            <a class="btn btn-primary" href="#contact">
+                Start a conversation
+                <i data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+</section>
 
             <!-- =========================
         9. CONTACT FORM

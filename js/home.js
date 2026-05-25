@@ -47,6 +47,7 @@
         initServicesSwiper();
         initContactForm();
         initCookieBanner();
+        initApproachSwitcher();
     }
 
     function qs(selector, scope = document) {
@@ -631,6 +632,55 @@
         }
     }
 
+    function initApproachSwitcher() {
+        const section =
+            document.querySelector(".approach-lens") ||
+            document.querySelector(".approach-switch");
+
+        if (!section) return;
+
+        const tabs = Array.from(section.querySelectorAll("[data-approach-tab]"));
+        const panels = Array.from(section.querySelectorAll("[data-approach-panel]"));
+
+        if (!tabs.length || !panels.length) return;
+
+        const activateTab = (target) => {
+            tabs.forEach((tab) => {
+                const isActive = tab.dataset.approachTab === target;
+
+                tab.classList.toggle("is-active", isActive);
+                tab.setAttribute("aria-selected", String(isActive));
+            });
+
+            panels.forEach((panel) => {
+                const isActive = panel.dataset.approachPanel === target;
+
+                panel.classList.toggle("is-active", isActive);
+
+                if (isActive) {
+                    panel.removeAttribute("hidden");
+                } else {
+                    panel.setAttribute("hidden", "");
+                }
+            });
+
+            if (window.lucide && typeof window.lucide.createIcons === "function") {
+                window.lucide.createIcons();
+            }
+        };
+
+        tabs.forEach((tab) => {
+            tab.addEventListener("click", () => {
+                activateTab(tab.dataset.approachTab);
+            });
+        });
+
+        const activeTab = tabs.find((tab) => tab.classList.contains("is-active")) || tabs[0];
+        activateTab(activeTab.dataset.approachTab);
+    }
+
+    document.addEventListener("DOMContentLoaded", initApproachSwitcher);
+
     function setStorageItem(key, value) {
         try {
             window.localStorage.setItem(key, value);
@@ -641,3 +691,4 @@
         return true;
     }
 })();
+

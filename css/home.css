@@ -3331,3 +3331,810 @@
         height: 34px !important;
     }
 }
+
+/* =========================
+   APPROACH SWITCHER — FULL REDESIGN
+========================= */
+
+.approach-switch {
+    position: relative;
+    overflow: hidden;
+}
+
+.approach-switch::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 12% 18%, rgba(255, 231, 97, 0.13), transparent 30rem),
+        radial-gradient(circle at 90% 72%, rgba(255, 231, 97, 0.08), transparent 26rem),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+    background-size: auto, auto, 96px 96px;
+    pointer-events: none;
+}
+
+.approach-switch .container {
+    position: relative;
+    z-index: 1;
+}
+
+.approach-switch__head {
+    display: grid;
+    gap: 20px;
+    max-width: 920px;
+    margin-bottom: clamp(38px, 5vw, 64px);
+}
+
+.approach-switch__head .section-title {
+    max-width: 920px;
+}
+
+.approach-switch__head .section-text {
+    max-width: 720px;
+}
+
+.approach-switch__grid {
+    display: grid;
+    grid-template-columns: minmax(320px, 0.72fr) minmax(0, 1fr);
+    gap: clamp(24px, 4vw, 46px);
+    align-items: stretch;
+}
+
+/* left switch card */
+.approach-switch__nav {
+    display: grid;
+    gap: 10px;
+    align-content: start;
+    padding: 12px;
+    border: 1px solid var(--color-border-dark);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.045);
+    backdrop-filter: blur(18px);
+}
+
+.approach-switch__tab {
+    position: relative;
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 14px;
+    align-items: center;
+    width: 100%;
+    min-height: 86px;
+    padding: 14px;
+    overflow: hidden;
+    color: var(--color-text-soft);
+    text-align: left;
+    border: 1px solid transparent;
+    border-radius: 22px;
+    background: transparent;
+    transition:
+        color var(--transition-base),
+        background var(--transition-base),
+        border-color var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.approach-switch__tab::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    background:
+        linear-gradient(135deg, rgba(255, 231, 97, 0.13), rgba(255, 255, 255, 0.035));
+    transition: opacity var(--transition-base);
+}
+
+.approach-switch__tab:hover::before,
+.approach-switch__tab.is-active::before {
+    opacity: 1;
+}
+
+.approach-switch__tab:hover,
+.approach-switch__tab.is-active {
+    color: var(--color-text-light);
+    border-color: rgba(255, 231, 97, 0.24);
+    background: rgba(255, 255, 255, 0.055);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.approach-switch__tab-icon {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    color: var(--color-text-light);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.06);
+    transition:
+        color var(--transition-base),
+        background var(--transition-base),
+        border-color var(--transition-base);
+}
+
+.approach-switch__tab.is-active .approach-switch__tab-icon {
+    color: #0B0D0A;
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.approach-switch__tab-icon svg {
+    width: 22px;
+    height: 22px;
+    stroke-width: 2;
+}
+
+.approach-switch__tab span:last-child {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 6px;
+}
+
+.approach-switch__tab strong {
+    color: inherit;
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 650;
+    line-height: 1;
+    letter-spacing: -0.035em;
+}
+
+.approach-switch__tab small {
+    color: rgba(199, 203, 191, 0.68);
+    font-size: 0.82rem;
+    font-weight: 650;
+    line-height: 1.35;
+}
+
+.approach-switch__tab.is-active small {
+    color: rgba(248, 246, 239, 0.72);
+}
+
+/* right changing card */
+.approach-switch__panel-card {
+    position: relative;
+    min-height: 470px;
+    overflow: hidden;
+    border: 1px solid var(--color-border-dark);
+    border-radius: 34px;
+    background: var(--color-bg-deep);
+    box-shadow: 0 28px 78px rgba(0, 0, 0, 0.26);
+}
+
+.approach-switch__image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.approach-switch__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.02);
+    filter: saturate(0.98) contrast(1.04);
+}
+
+.approach-switch__image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(5, 6, 5, 0.9) 0%, rgba(5, 6, 5, 0.76) 48%, rgba(5, 6, 5, 0.42) 100%),
+        linear-gradient(180deg, rgba(5, 6, 5, 0.14), rgba(5, 6, 5, 0.84));
+}
+
+.approach-switch__panel {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    align-content: end;
+    min-height: 470px;
+    max-width: 690px;
+    padding: clamp(28px, 4vw, 48px);
+    animation: approachFade 340ms ease both;
+}
+
+@keyframes approachFade {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.approach-switch__eyebrow {
+    width: fit-content;
+    margin-bottom: 16px;
+    color: var(--color-accent);
+    font-size: 0.74rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.approach-switch__panel h3 {
+    max-width: 620px;
+    margin: 0 0 18px;
+    color: var(--color-text-light);
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 4.35rem);
+    font-weight: 650;
+    line-height: 0.94;
+    letter-spacing: -0.075em;
+}
+
+.approach-switch__panel p {
+    max-width: 600px;
+    margin: 0;
+    color: rgba(248, 246, 239, 0.74);
+    font-size: 1rem;
+    line-height: 1.76;
+}
+
+.approach-switch__panel ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 26px;
+}
+
+.approach-switch__panel li {
+    display: inline-flex;
+    align-items: center;
+    min-height: 36px;
+    padding: 9px 12px;
+    color: var(--color-text-light);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.075);
+    font-size: 0.82rem;
+    font-weight: 750;
+}
+
+/* bottom disclaimer + CTA */
+.approach-switch__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    margin-top: 26px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-border-dark);
+}
+
+.approach-switch__bottom p {
+    max-width: 640px;
+    color: rgba(248, 246, 239, 0.62);
+    font-size: 0.94rem;
+    line-height: 1.7;
+}
+
+/* responsive */
+@media (max-width: 1080px) {
+    .approach-switch__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .approach-switch__nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .approach-switch__bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 760px) {
+    .approach-switch__nav {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        border-radius: 24px;
+    }
+
+    .approach-switch__tab {
+        min-height: 74px;
+        grid-template-columns: 42px 1fr;
+        border-radius: 18px;
+    }
+
+    .approach-switch__tab-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 14px;
+    }
+
+    .approach-switch__panel-card,
+    .approach-switch__panel {
+        min-height: 520px;
+    }
+
+    .approach-switch__panel {
+        padding: 24px;
+    }
+
+    .approach-switch__panel h3 {
+        font-size: clamp(2rem, 11vw, 3.2rem);
+    }
+
+    .approach-switch__panel ul {
+        display: grid;
+        gap: 8px;
+    }
+
+    .approach-switch__panel li {
+        width: fit-content;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .approach-switch__panel-card,
+    .approach-switch__panel {
+        min-height: 570px;
+    }
+}
+
+/* =========================
+   APPROACH LENS — NEW INTERACTIVE DESIGN
+========================= */
+
+.approach-lens {
+    position: relative;
+    overflow: hidden;
+}
+
+.approach-lens::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 14% 20%, rgba(255, 231, 97, 0.14), transparent 30rem),
+        radial-gradient(circle at 86% 72%, rgba(255, 231, 97, 0.08), transparent 28rem),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.024) 1px, transparent 1px);
+    background-size: auto, auto, 92px 92px;
+    pointer-events: none;
+}
+
+.approach-lens .container {
+    position: relative;
+    z-index: 1;
+}
+
+.approach-lens__top {
+    display: grid;
+    gap: 20px;
+    max-width: 940px;
+    margin-bottom: clamp(36px, 5vw, 62px);
+}
+
+.approach-lens__top .section-title {
+    max-width: 920px;
+}
+
+.approach-lens__top .section-text {
+    max-width: 720px;
+}
+
+/* layout */
+.approach-lens__shell {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.38fr) minmax(0, 1fr);
+    gap: clamp(22px, 4vw, 44px);
+    align-items: stretch;
+}
+
+/* left tabs - not cards, more like control rail */
+.approach-lens__tabs {
+    display: grid;
+    align-content: stretch;
+    border-top: 1px solid var(--color-border-dark);
+    border-bottom: 1px solid var(--color-border-dark);
+}
+
+.approach-lens__tab {
+    position: relative;
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    gap: 14px;
+    align-items: center;
+    min-height: 92px;
+    padding: 22px 0;
+    color: rgba(248, 246, 239, 0.58);
+    text-align: left;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--color-border-dark);
+    transition:
+        color var(--transition-base),
+        padding-left var(--transition-base);
+}
+
+.approach-lens__tab:last-child {
+    border-bottom: 0;
+}
+
+.approach-lens__tab::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 20px;
+    bottom: 20px;
+    width: 2px;
+    transform: scaleY(0);
+    transform-origin: center;
+    border-radius: 999px;
+    background: var(--color-accent);
+    box-shadow: 0 0 20px rgba(255, 231, 97, 0.38);
+    transition: transform var(--transition-base);
+}
+
+.approach-lens__tab:hover,
+.approach-lens__tab.is-active {
+    color: var(--color-text-light);
+    padding-left: 16px;
+}
+
+.approach-lens__tab:hover::before,
+.approach-lens__tab.is-active::before {
+    transform: scaleY(1);
+}
+
+.approach-lens__tab svg {
+    width: 25px;
+    height: 25px;
+    color: currentColor;
+    stroke-width: 1.9;
+}
+
+.approach-lens__tab.is-active svg {
+    color: var(--color-accent);
+}
+
+.approach-lens__tab span {
+    font-family: var(--font-heading);
+    font-size: clamp(1.15rem, 1.6vw, 1.55rem);
+    font-weight: 650;
+    line-height: 1;
+    letter-spacing: -0.045em;
+}
+
+/* right stage */
+.approach-lens__stage {
+    position: relative;
+    min-height: 500px;
+    overflow: hidden;
+    border: 1px solid var(--color-border-dark);
+    border-radius: 34px;
+    background:
+        radial-gradient(circle at 78% 20%, rgba(255, 231, 97, 0.13), transparent 26rem),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.02));
+    box-shadow: var(--shadow-soft);
+}
+
+/* IMPORTANT: this fixes switching */
+.approach-lens__panel[hidden] {
+    display: none !important;
+}
+
+.approach-lens__panel {
+    position: relative;
+    min-height: 500px;
+    padding: clamp(28px, 5vw, 58px);
+    display: grid;
+    grid-template-columns: minmax(0, 0.76fr) minmax(300px, 0.82fr);
+    gap: clamp(28px, 5vw, 72px);
+    align-items: end;
+    animation: approachLensFade 320ms ease both;
+}
+
+@keyframes approachLensFade {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* huge background word */
+.approach-lens__word {
+    position: relative;
+    color: rgba(248, 246, 239, 0.055);
+    font-family: var(--font-heading);
+    font-size: clamp(4.8rem, 11vw, 10.8rem);
+    font-weight: 700;
+    line-height: 0.78;
+    letter-spacing: -0.1em;
+    pointer-events: none;
+}
+
+.approach-lens__word::after {
+    content: "";
+    display: block;
+    width: min(100%, 360px);
+    height: 1px;
+    margin-top: 30px;
+    background: linear-gradient(90deg, var(--color-accent), transparent);
+    opacity: 0.75;
+}
+
+/* content */
+.approach-lens__content {
+    position: relative;
+    z-index: 1;
+    max-width: 620px;
+}
+
+.approach-lens__eyebrow {
+    margin-bottom: 16px;
+    color: var(--color-accent);
+    font-size: 0.74rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.approach-lens__content h3 {
+    margin: 0 0 20px;
+    color: var(--color-text-light);
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4.2vw, 4.25rem);
+    font-weight: 650;
+    line-height: 0.94;
+    letter-spacing: -0.075em;
+}
+
+.approach-lens__content p {
+    max-width: 560px;
+    margin: 0;
+    color: rgba(248, 246, 239, 0.72);
+    font-size: 1rem;
+    line-height: 1.76;
+}
+
+.approach-lens__points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 26px;
+}
+
+.approach-lens__points span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 8px 11px;
+    color: rgba(248, 246, 239, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.055);
+    font-size: 0.8rem;
+    font-weight: 750;
+}
+
+/* bottom */
+.approach-lens__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+    margin-top: 26px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-border-dark);
+}
+
+.approach-lens__footer p {
+    max-width: 660px;
+    color: rgba(248, 246, 239, 0.62);
+    font-size: 0.94rem;
+    line-height: 1.7;
+}
+
+/* responsive */
+@media (max-width: 1080px) {
+    .approach-lens__shell {
+        grid-template-columns: 1fr;
+    }
+
+    .approach-lens__tabs {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        border: 1px solid var(--color-border-dark);
+        border-radius: 24px;
+        overflow: hidden;
+    }
+
+    .approach-lens__tab {
+        min-height: 82px;
+        padding: 18px;
+        border-bottom: 0;
+        border-right: 1px solid var(--color-border-dark);
+    }
+
+    .approach-lens__tab:last-child {
+        border-right: 0;
+    }
+
+    .approach-lens__tab:hover,
+    .approach-lens__tab.is-active {
+        padding-left: 18px;
+    }
+
+    .approach-lens__tab::before {
+        left: 18px;
+        right: 18px;
+        top: auto;
+        bottom: 0;
+        width: auto;
+        height: 2px;
+        transform: scaleX(0);
+    }
+
+    .approach-lens__tab:hover::before,
+    .approach-lens__tab.is-active::before {
+        transform: scaleX(1);
+    }
+
+    .approach-lens__panel {
+        grid-template-columns: 1fr;
+        align-items: end;
+    }
+
+    .approach-lens__footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 760px) {
+    .approach-lens__tabs {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .approach-lens__tab {
+        min-height: 72px;
+        grid-template-columns: 26px 1fr;
+        gap: 10px;
+        padding: 14px;
+    }
+
+    .approach-lens__tab:nth-child(2) {
+        border-right: 0;
+    }
+
+    .approach-lens__tab:nth-child(1),
+    .approach-lens__tab:nth-child(2) {
+        border-bottom: 1px solid var(--color-border-dark);
+    }
+
+    .approach-lens__tab span {
+        font-size: 1rem;
+    }
+
+    .approach-lens__stage,
+    .approach-lens__panel {
+        min-height: 520px;
+    }
+
+    .approach-lens__panel {
+        padding: 24px;
+    }
+
+    .approach-lens__word {
+        font-size: clamp(4rem, 18vw, 6.6rem);
+    }
+
+    .approach-lens__content h3 {
+        font-size: clamp(2rem, 11vw, 3.2rem);
+    }
+}
+
+/* =========================
+   APPROACH PANEL — FULL WIDTH CONTENT FIX
+========================= */
+
+/* если используешь новый вариант approach-lens */
+.approach-lens__panel {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    align-items: stretch !important;
+    min-height: 500px !important;
+    padding: clamp(30px, 5vw, 58px) !important;
+}
+
+/* большое слово больше не занимает отдельную колонку */
+.approach-lens__word {
+    position: absolute !important;
+    left: clamp(26px, 4vw, 54px) !important;
+    top: clamp(22px, 4vw, 48px) !important;
+    z-index: 0 !important;
+    max-width: 100% !important;
+    color: rgba(248, 246, 239, 0.045) !important;
+    font-size: clamp(5rem, 13vw, 12rem) !important;
+    line-height: 0.78 !important;
+    pointer-events: none !important;
+}
+
+.approach-lens__word::after {
+    display: none !important;
+}
+
+/* текст теперь занимает всю карточку */
+.approach-lens__content {
+    position: relative !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.approach-lens__content h3 {
+    max-width: 920px !important;
+}
+
+.approach-lens__content p {
+    max-width: 780px !important;
+}
+
+.approach-lens__points {
+    max-width: 100% !important;
+}
+
+/* если у тебя всё ещё стоит старый approach-switch */
+.approach-switch__panel {
+    width: 100% !important;
+    max-width: none !important;
+    align-content: end !important;
+}
+
+.approach-switch__panel h3 {
+    max-width: 920px !important;
+}
+
+.approach-switch__panel p {
+    max-width: 780px !important;
+}
+
+.approach-switch__panel ul {
+    max-width: 100% !important;
+}
+
+/* обязательно, чтобы hidden работал */
+.approach-lens__panel[hidden],
+.approach-switch__panel[hidden] {
+    display: none !important;
+}
+
+/* mobile */
+@media (max-width: 760px) {
+
+    .approach-lens__panel,
+    .approach-switch__panel {
+        min-height: 520px !important;
+        padding: 24px !important;
+    }
+
+    .approach-lens__content h3,
+    .approach-switch__panel h3 {
+        max-width: 100% !important;
+    }
+
+    .approach-lens__content p,
+    .approach-switch__panel p {
+        max-width: 100% !important;
+    }
+}
