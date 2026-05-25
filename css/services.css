@@ -1210,3 +1210,260 @@
 .deliverables-list__item:hover span {
     color: #171915 !important;
 }
+
+/* =========================
+   SERVICE PAGES — MOBILE CENTERED H1 / H2
+   all service pages
+========================= */
+
+@media (max-width: 760px) {
+
+    /* HERO H1 */
+    .page-hero__content,
+    .service-hero .page-hero__content {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: grid !important;
+        justify-items: center !important;
+        text-align: center !important;
+    }
+
+    .page-hero__content>div,
+    .service-hero .page-hero__content>div {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: grid !important;
+        justify-items: center !important;
+        text-align: center !important;
+    }
+
+    .page-hero__title,
+    .service-hero .page-hero__title,
+    .page-hero h1,
+    .service-hero h1 {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+        text-wrap: balance !important;
+        line-height: 1.02 !important;
+        letter-spacing: -0.065em !important;
+    }
+
+    .page-hero__title span,
+    .service-hero .page-hero__title span {
+        display: inline !important;
+    }
+
+    .page-hero__text,
+    .service-hero .page-hero__text {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+        text-wrap: pretty !important;
+    }
+
+    .page-hero__meta {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    .service-hero .section-kicker {
+        margin-inline: auto !important;
+    }
+
+    /* ALL SERVICE PAGE H2 */
+    .section-title,
+    .section-head .section-title,
+    .service-overview .section-title,
+    .service-matters .section-title,
+    .service-method .section-title,
+    .service-deliverables .section-title,
+    .service-promise .section-title,
+    .service-faq .section-title {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+        text-wrap: balance !important;
+        line-height: 1.04 !important;
+        letter-spacing: -0.06em !important;
+    }
+
+    /* чтобы блоки с h2 тоже центрировались */
+    .section-head,
+    .section-head__content,
+    .service-overview__content,
+    .service-matters__grid>div,
+    .service-deliverables__panel,
+    .service-faq__content,
+    .service-promise__box>div {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        justify-items: center !important;
+    }
+
+    .section-text,
+    .section-head__aside,
+    .service-overview__extra,
+    .service-matters__text,
+    .service-faq__content {
+        max-width: 100% !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+        text-wrap: pretty !important;
+    }
+
+    .section-kicker {
+        margin-inline: auto !important;
+    }
+}
+
+/* very small phones */
+@media (max-width: 480px) {
+
+    .page-hero__title,
+    .service-hero .page-hero__title {
+        font-size: clamp(2.15rem, 11vw, 3.25rem) !important;
+        line-height: 1.03 !important;
+    }
+
+    .section-title {
+        font-size: clamp(1.95rem, 9.5vw, 2.95rem) !important;
+        line-height: 1.05 !important;
+    }
+}
+
+/* =========================
+   SERVICE HERO — TABLET H1 CENTERED
+   only service pages / tablet only
+========================= */
+
+@media (min-width: 761px) and (max-width: 1180px) {
+    body[data-page="service"] .service-hero .page-hero__content {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: grid !important;
+        justify-items: center !important;
+        text-align: center !important;
+    }
+
+    body[data-page="service"] .service-hero .page-hero__content>div {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: grid !important;
+        justify-items: center !important;
+        text-align: center !important;
+    }
+
+    body[data-page="service"] .service-hero .page-hero__title,
+    body[data-page="service"] .service-hero h1 {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+        text-wrap: balance !important;
+        line-height: 1.02 !important;
+        letter-spacing: -0.065em !important;
+    }
+
+    body[data-page="service"] .service-hero .page-hero__title span {
+        display: inline !important;
+    }
+
+    body[data-page="service"] .service-hero .section-kicker {
+        margin-inline: auto !important;
+    }
+
+    body[data-page="service"] .service-hero .page-hero__meta {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+}
+
+/* =========================
+   IMPROVEMENT CARDS — SMALLER ICONS ON TABLET / MOBILE
+   no background
+========================= */
+
+@media (max-width: 1180px) {
+    .improvement-card>svg {
+        width: 28px !important;
+        height: 28px !important;
+        background: transparent !important;
+    }
+
+    .improvement-card h3 {
+        padding-right: 48px !important;
+    }
+}
+
+@media (max-width: 760px) {
+    .improvement-card>svg {
+        width: 24px !important;
+        height: 24px !important;
+        background: transparent !important;
+    }
+
+    .improvement-card h3 {
+        padding-right: 42px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .improvement-card>svg {
+        width: 22px !important;
+        height: 22px !important;
+        background: transparent !important;
+    }
+
+    .improvement-card h3 {
+        padding-right: 38px !important;
+    }
+}
+/* =========================
+   METHOD LIST — MOBILE ICON TOP RIGHT
+========================= */
+
+@media (max-width: 760px) {
+    .method-list__item {
+        position: relative !important;
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+        padding: 22px 20px !important;
+    }
+
+    .method-list__item>svg {
+        position: absolute !important;
+        top: 22px !important;
+        right: 20px !important;
+        z-index: 2 !important;
+        margin: 0 !important;
+    }
+
+    .method-list__item h3 {
+        padding-right: 52px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .method-list__item p {
+        padding-right: 0 !important;
+    }
+}
+
+@media (max-width: 520px) {
+    .method-list__item {
+        padding: 20px 18px !important;
+    }
+
+    .method-list__item>svg {
+        top: 20px !important;
+        right: 18px !important;
+    }
+
+    .method-list__item h3 {
+        padding-right: 46px !important;
+    }
+}
