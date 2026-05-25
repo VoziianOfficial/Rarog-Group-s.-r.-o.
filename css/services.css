@@ -1101,3 +1101,112 @@
 .service-faq .related-services .btn:hover {
     box-shadow: 0 18px 38px rgba(20, 24, 18, 0.16) !important;
 }
+
+/* =========================
+   SERVICE FAQ — ICON COLOR FIX
+   replace yellow icons on light background
+========================= */
+
+/* стрелки в Related services */
+.service-faq .related-services__links svg {
+    color: #171915 !important;
+    stroke: #171915 !important;
+}
+
+/* иконка в кнопке Contact Rarog Group */
+.service-faq .related-services .btn svg {
+    color: currentColor !important;
+    stroke: currentColor !important;
+}
+
+/* если FAQ icon сделан через svg */
+.service-faq .faq-button svg,
+.service-faq .faq-icon svg {
+    color: #171915 !important;
+    stroke: #171915 !important;
+}
+
+/* если FAQ icon сделан через before/after */
+.service-faq .faq-icon::before,
+.service-faq .faq-icon::after {
+    background: #171915 !important;
+}
+
+/* hover без желтого */
+.service-faq .related-services__links a:hover svg,
+.service-faq .faq-item:hover .faq-button svg,
+.service-faq .faq-item.is-open .faq-button svg {
+    color: #0B0D0A !important;
+    stroke: #0B0D0A !important;
+}
+/* =========================
+   DELIVERABLES — CHECK ICON COLOR FIX
+========================= */
+
+.deliverables-list__item svg {
+    color: #171915 !important;
+    stroke: #171915 !important;
+}
+
+/* при hover оставляем тоже тёмными, без жёлтого */
+.deliverables-list__item:hover svg {
+    color: #0B0D0A !important;
+    stroke: #0B0D0A !important;
+}
+
+/* если хочешь чуть мягче, можно заменить #171915 на #3A3D34 */
+
+/* =========================
+   DELIVERABLES — NON-YELLOW CARD HOVERS
+========================= */
+
+.deliverables-list__item {
+    position: relative !important;
+    overflow: hidden !important;
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        background var(--transition-base),
+        box-shadow var(--transition-base) !important;
+}
+
+/* убираем любые старые желтые эффекты */
+.deliverables-list__item::before,
+.deliverables-list__item::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* hover без желтого */
+.deliverables-list__item:hover {
+    transform: translateY(-2px) !important;
+    border-color: rgba(20, 24, 18, 0.22) !important;
+    background:
+        linear-gradient(145deg,
+            rgba(255, 255, 255, 0.96),
+            rgba(255, 255, 255, 0.68)) !important;
+    box-shadow:
+        0 18px 44px rgba(20, 24, 18, 0.11),
+        inset 0 1px 0 rgba(255, 255, 255, 0.78) !important;
+}
+
+/* галочки тоже без желтого */
+.deliverables-list__item svg {
+    color: #171915 !important;
+    stroke: #171915 !important;
+    transition:
+        transform var(--transition-base),
+        color var(--transition-base),
+        stroke var(--transition-base) !important;
+}
+
+.deliverables-list__item:hover svg {
+    color: #0B0D0A !important;
+    stroke: #0B0D0A !important;
+    transform: scale(1.08) !important;
+}
+
+/* текст при hover — чуть четче */
+.deliverables-list__item:hover span {
+    color: #171915 !important;
+}
