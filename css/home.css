@@ -2134,39 +2134,76 @@
 }
 
 /* =========================
-   SERVICES CARDS BACKGROUND + EQUAL CONTENT
-   no inline styles
+   SERVICE CARDS — STABLE BACKGROUND IMAGES
+   fixed for Swiper loop/clones
 ========================= */
 
-/* background images by card order */
-.home-services__swiper .swiper-slide:nth-child(1) {
+.service-card--google {
     --service-card-bg: url("../assets/images/service-google-ads.jpg");
     --service-card-position: center;
 }
 
-.home-services__swiper .swiper-slide:nth-child(2) {
+.service-card--seo {
     --service-card-bg: url("../assets/images/service-seo.jpg");
     --service-card-position: center;
 }
 
-.home-services__swiper .swiper-slide:nth-child(3) {
+.service-card--social {
     --service-card-bg: url("../assets/images/service-social-media.jpg");
     --service-card-position: center;
 }
 
-.home-services__swiper .swiper-slide:nth-child(4) {
+.service-card--web {
     --service-card-bg: url("../assets/images/service-web-design.jpg");
     --service-card-position: center;
 }
 
-.home-services__swiper .swiper-slide:nth-child(5) {
+.service-card--conversion {
     --service-card-bg: url("../assets/images/service-conversion.jpg");
     --service-card-position: center;
 }
 
-.home-services__swiper .swiper-slide:nth-child(6) {
+.service-card--local {
     --service-card-bg: url("../assets/images/service-local-seo.jpg");
     --service-card-position: center;
+}
+
+/* один стабильный overlay для всех карточек */
+.service-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background:
+        linear-gradient(180deg,
+            rgba(5, 6, 5, 0.18) 0%,
+            rgba(5, 6, 5, 0.48) 48%,
+            rgba(5, 6, 5, 0.8) 100%),
+        linear-gradient(90deg,
+            rgba(5, 6, 5, 0.5) 0%,
+            rgba(5, 6, 5, 0.2) 58%,
+            rgba(5, 6, 5, 0.38) 100%),
+        var(--service-card-bg) !important;
+    background-size: cover !important;
+    background-position: var(--service-card-position, center) !important;
+    filter: brightness(1.22) saturate(1.14) contrast(1.04) !important;
+    transform: scale(1.02);
+    transition:
+        transform var(--transition-slow),
+        filter var(--transition-slow);
+}
+
+/* убираем разные фильтры active/next, чтобы фото не прыгали */
+.service-card.swiper-slide-active::after,
+.service-card.swiper-slide-next::after,
+.service-card.swiper-slide-prev::after {
+    filter: brightness(1.22) saturate(1.14) contrast(1.04) !important;
+}
+
+/* hover только на самой наведенной карточке */
+.service-card:hover::after {
+    transform: scale(1.06);
+    filter: brightness(1.28) saturate(1.17) contrast(1.05) !important;
 }
 
 /* swiper equal height */
@@ -5064,3 +5101,4 @@ body.menu-open {
 .service-card:hover::after {
     filter: brightness(1.3) saturate(1.18) contrast(1.06) !important;
 }
+
