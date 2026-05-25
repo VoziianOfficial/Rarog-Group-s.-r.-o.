@@ -1,16 +1,15 @@
-<svg width="278" height="72" viewBox="0 0 278 72" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
-  aria-labelledby="rarogLogoTitle rarogLogoDesc">
+<svg width="278" height="72" viewBox="0 0 278 72" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="rarogLogoTitle rarogLogoDesc">
   <title id="rarogLogoTitle">Rarog Group logo</title>
-  <desc id="rarogLogoDesc">Premium rocket mark with Rarog Group wordmark</desc>
+  <desc id="rarogLogoDesc">Premium red rocket mark with Rarog Group wordmark</desc>
 
   <g transform="translate(0 4) scale(0.66)">
     <path
       d="M74.88 12.86C60.56 15.54 47.56 23.42 38.62 34.64L26.84 49.43L45.76 68.35L60.55 56.57C71.77 47.63 79.65 34.63 82.33 20.31L83.95 11.62L74.88 12.86Z"
-      fill="#FFE761" />
+      fill="#FF2A1F" />
 
-    <path d="M42.04 31.2L25.36 26.8L14.64 37.52L31.42 44.88L42.04 31.2Z" fill="#FFF176" />
+    <path d="M42.04 31.2L25.36 26.8L14.64 37.52L31.42 44.88L42.04 31.2Z" fill="#FF4A32" />
 
-    <path d="M64.02 53.18L68.42 69.86L57.7 80.58L50.34 63.8L64.02 53.18Z" fill="#FFF176" />
+    <path d="M64.02 53.18L68.42 69.86L57.7 80.58L50.34 63.8L64.02 53.18Z" fill="#FF4A32" />
 
     <path
       d="M52.38 33.62C56.28 29.72 62.6 29.72 66.5 33.62C70.4 37.52 70.4 43.84 66.5 47.74C62.6 51.64 56.28 51.64 52.38 47.74C48.48 43.84 48.48 37.52 52.38 33.62Z"
@@ -18,16 +17,16 @@
 
     <path
       d="M56.84 38.08C58.28 36.64 60.6 36.64 62.04 38.08C63.48 39.52 63.48 41.84 62.04 43.28C60.6 44.72 58.28 44.72 56.84 43.28C55.4 41.84 55.4 39.52 56.84 38.08Z"
-      fill="#FFF6B0" />
+      fill="#FFD2C8" />
 
     <path d="M33.08 56.42L20.2 59.98L16.04 64.14L28.78 61.9L26.54 74.64L30.7 70.48L34.26 57.6L33.08 56.42Z"
-      fill="#FFE761" />
+      fill="#FF2A1F" />
 
-    <path d="M39.68 63.02L23.92 78.78" stroke="#FFF176" stroke-width="5.2" stroke-linecap="round" />
+    <path d="M39.68 63.02L23.92 78.78" stroke="#FF4A32" stroke-width="5.2" stroke-linecap="round" />
 
-    <path d="M31.92 52.72L17.44 67.2" stroke="#FFF6B0" stroke-width="3.8" stroke-linecap="round" opacity="0.92" />
+    <path d="M31.92 52.72L17.44 67.2" stroke="#FFD2C8" stroke-width="3.8" stroke-linecap="round" opacity="0.92" />
 
-    <path d="M47.2 68L32.72 82.48" stroke="#FFF6B0" stroke-width="3.8" stroke-linecap="round" opacity="0.92" />
+    <path d="M47.2 68L32.72 82.48" stroke="#FFD2C8" stroke-width="3.8" stroke-linecap="round" opacity="0.92" />
 
     <path
       d="M77.2 13.2C74.28 28.42 66.34 42.18 54.58 51.58L45.86 58.54L36.64 49.32L43.6 40.6C53 28.84 66.76 20.9 81.98 17.98"
@@ -35,16 +34,12 @@
   </g>
 
   <g transform="translate(76 18)">
-    <text x="0" y="21" fill="#F8F6EF" font-family="Space Grotesk, Manrope, Inter, Arial, sans-serif" font-size="24"
-      font-weight="600" letter-spacing="-0.7">
+    <text x="0" y="21" fill="#F8F6EF" font-family="Space Grotesk, Manrope, Inter, Arial, sans-serif" font-size="24" font-weight="600" letter-spacing="-0.7">
       Rarog Group
     </text>
 
-    <text x="1" y="43" fill="#C7CBBF" font-family="Inter, Manrope, Arial, sans-serif" font-size="10" font-weight="500"
-      letter-spacing="2.4">
+    <text x="1" y="43" fill="#C7CBBF" font-family="Inter, Manrope, Arial, sans-serif" font-size="10" font-weight="500" letter-spacing="2.4">
       DIGITAL MARKETING
     </text>
   </g>
-
-
 </svg>
