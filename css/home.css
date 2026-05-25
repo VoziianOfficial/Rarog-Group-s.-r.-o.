@@ -4923,3 +4923,107 @@
 body.menu-open {
     overflow: hidden !important;
 }
+
+/* =========================
+   MOBILE HEADINGS — FULL WIDTH BALANCED
+========================= */
+
+@media (max-width: 760px) {
+
+    /* HERO H1 */
+    .home-hero__content {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-inline: 0 !important;
+        text-align: center !important;
+    }
+
+    .home-hero__title {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+        text-wrap: balance !important;
+        font-size: clamp(2.45rem, 13vw, 4.2rem) !important;
+        line-height: 0.98 !important;
+        letter-spacing: -0.075em !important;
+    }
+
+    .home-hero__title-line {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .home-hero__text {
+        max-width: 100% !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+    }
+
+    .home-hero__actions {
+        justify-content: center !important;
+    }
+
+    /* ALL SECTION H2 */
+    .section-title,
+    .section-head .section-title,
+    .growth-flow .section-title,
+    .why-rarog-field .section-title,
+    .approach-lens .section-title,
+    .home-faq .section-title,
+    .home-contact .section-title {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+        text-wrap: balance !important;
+        line-height: 1.02 !important;
+        letter-spacing: -0.06em !important;
+    }
+
+    /* чтобы верхние блоки секций тоже центрировались */
+    .section-head,
+    .section-head__content,
+    .growth-flow__intro,
+    .why-rarog-field__head,
+    .approach-lens__top,
+    .home-faq__intro,
+    .home-contact__content,
+    .home-about__content {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+    }
+
+    .section-text,
+    .section-head__aside,
+    .growth-flow .section-text,
+    .why-rarog-field__lead,
+    .approach-lens .section-text,
+    .home-faq__text,
+    .home-contact .section-text,
+    .home-about .section-text {
+        max-width: 100% !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+        text-wrap: pretty !important;
+    }
+
+    .section-kicker {
+        margin-inline: auto !important;
+    }
+}
+
+/* очень маленькие телефоны */
+@media (max-width: 480px) {
+    .home-hero__title {
+        font-size: clamp(2.18rem, 13.5vw, 3.35rem) !important;
+        line-height: 1 !important;
+    }
+
+    .section-title {
+        font-size: clamp(2rem, 10vw, 3.05rem) !important;
+        line-height: 1.04 !important;
+    }
+}
