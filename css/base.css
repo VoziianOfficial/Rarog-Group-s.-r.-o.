@@ -53,6 +53,7 @@ body {
     min-width: 320px;
     margin: 0;
     overflow-x: hidden;
+    padding-top: var(--header-height);
     font-family: var(--font-body);
     font-size: 16px;
     line-height: 1.65;
@@ -161,17 +162,24 @@ figure {
 /* =========================
    GLOBAL LAYOUT
 ========================= */
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
 
 .page-shell {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    overflow: hidden;
+    overflow: visible;
 }
 
 main {
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .container {
@@ -518,10 +526,11 @@ main {
 /* =========================
    HEADER
 ========================= */
-
 .site-header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 900;
     width: 100%;
     border-bottom: 1px solid transparent;
