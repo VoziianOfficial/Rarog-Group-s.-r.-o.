@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Web Design | Rarog Group</title>
+    <meta name="description"
+        content="Responsive, clean, conversion-aware web design direction for modern businesses that need stronger digital experiences and clearer contact flows." />
+
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg" />
+
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/services.css" />
+</head>
+
+<body data-page="service" data-service-id="web-design">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <div class="page-shell">
+        <!-- =========================
+      HEADER
+    ========================== -->
+        <header class="site-header" data-site-header>
+            <div class="container-wide">
+                <div class="site-header__inner">
+                    <a class="site-logo" href="./index.html#home" aria-label="Rarog Group home">
+                        <img src="./assets/icons/logo.svg" alt="Rarog Group logo" width="278" height="72" />
+                    </a>
+
+                    <nav class="desktop-nav" aria-label="Primary navigation">
+                        <ul class="desktop-nav__list">
+                            <li class="desktop-nav__item">
+                                <a class="desktop-nav__link" href="./index.html#home">Home</a>
+                            </li>
+
+                            <li class="desktop-nav__item">
+                                <a class="desktop-nav__link" href="./index.html#about">About</a>
+                            </li>
+
+                            <li class="desktop-nav__item desktop-nav__item--services">
+                                <button class="desktop-nav__dropdown-button is-active" type="button"
+                                    aria-expanded="false" aria-controls="servicesDropdown" data-services-toggle>
+                                    Services
+                                    <i data-lucide="chevron-down" aria-hidden="true"></i>
+                                </button>
+
+                                <div class="services-dropdown" id="servicesDropdown" data-services-dropdown>
+                                    <div class="services-dropdown__grid">
+                                        <a class="services-dropdown__link" href="./google-ads.html">
+                                            <span class="services-dropdown__icon">
+                                                <i data-lucide="badge-dollar-sign" aria-hidden="true"></i>
+                                            </span>
+                                            <span>
+                                                <span class="services-dropdown__title">Google Ads</span>
+                                                <span class="services-dropdown__text">Paid search campaigns with clearer
+                                                    intent.</span>
+                                            </span>
+                                        </a>
+
+                                        <a class="services-dropdown__link" href="./seo-optimization.html">
+                                            <span class="services-dropdown__icon">
+                                                <i data-lucide="search-check" aria-hidden="true"></i>
+                                            </span>
+                                            <span>
+                                                <span class="services-dropdown__title">SEO Optimization</span>
+                                                <span class="services-dropdown__text">Cleaner structure for search
+                                                    visibility.</span>
+                                            </span>
+                                        </a>
+
+                                        <a class="services-dropdown__link" href="./social-media-marketing.html">
+                                            <span class="services-dropdown__icon">
+                                                <i data-lucide="megaphone" aria-hidden="true"></i>
+                                            </span>
+                                            <span>
+                                                <span class="services-dropdown__title">Social Media Marketing</span>
+                                                <span class="services-dropdown__text">Brand presence and audience
+                                                    alignment.</span>
+                                            </span>
+                                        </a>
+
+                                        <a class="services-dropdown__link is-active" href="./web-design.html">
+                                            <span class="services-dropdown__icon">
+                                                <i data-lucide="layout-template" aria-hidden="true"></i>
+                                            </span>
+                                            <span>
+                                                <span class="services-dropdown__title">Web Design</span>
+                                                <span class="services-dropdown__text">Responsive conversion-aware
+                                                    websites.</span>
+                                            </span>
+                                        </a>
+
+                                        <a class="services-dropdown__link" href="./conversion-boost.html">
+                                            <span class="services-dropdown__icon">
+                                                <i data-lucide="mouse-pointer-click" aria-hidden="true"></i>
+                                            </span>
+                                            <span>
+                                                <span class="services-dropdown__title">Conversion Boost</span>
+                                                <span class="services-dropdown__text">CTA, form, and journey
+                                                    improvements.</span>
+                                            </span>
+                                        </a>
+
+                                        <a class="services-dropdown__link" href="./local-seo.html">
+                                            <span class="services-dropdown__icon">
+                                                <i data-lucide="map-pin-check" aria-hidden="true"></i>
+                                            </span>
+                                            <span>
+                                                <span class="services-dropdown__title">Local SEO</span>
+                                                <span class="services-dropdown__text">Location-based visibility
+                                                    signals.</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="desktop-nav__item">
+                                <a class="desktop-nav__link" href="./index.html#process">Process</a>
+                            </li>
+
+                            <li class="desktop-nav__item">
+                                <a class="desktop-nav__link" href="./index.html#approach">Approach</a>
+                            </li>
+
+                            <li class="desktop-nav__item">
+                                <a class="desktop-nav__link" href="./index.html#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="header-actions">
+                        <a class="header-email" href="mailto:support@rarogads.com" data-email-link
+                            aria-label="Email Rarog Group">
+                            <i data-lucide="mail" aria-hidden="true"></i>
+                            <span data-email-text>support@rarogads.com</span>
+                        </a>
+
+                        <button class="mobile-menu-button" type="button" aria-label="Open menu"
+                            aria-controls="mobileMenu" aria-expanded="false" data-mobile-menu-open>
+                            <i data-lucide="menu" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- =========================
+      MOBILE MENU
+    ========================== -->
+        <aside class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation" data-mobile-menu>
+            <div class="mobile-menu__top">
+                <a class="mobile-menu__logo" href="./index.html#home" aria-label="Rarog Group home"
+                    data-mobile-menu-link>
+                    <img src="./assets/icons/logo.svg" alt="Rarog Group logo" width="278" height="72" />
+                </a>
+
+                <button class="mobile-menu__close" type="button" aria-label="Close menu" data-mobile-menu-close>
+                    <i data-lucide="x" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <div class="mobile-menu__body">
+                <nav class="mobile-menu__nav" aria-label="Mobile primary navigation">
+                    <a class="mobile-menu__link" href="./index.html#home" data-mobile-menu-link>
+                        Home
+                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                    </a>
+
+                    <a class="mobile-menu__link" href="./index.html#about" data-mobile-menu-link>
+                        About
+                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                    </a>
+
+                    <a class="mobile-menu__link is-active" href="./index.html#services" data-mobile-menu-link>
+                        Services
+                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                    </a>
+
+                    <a class="mobile-menu__link" href="./index.html#process" data-mobile-menu-link>
+                        Process
+                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                    </a>
+
+                    <a class="mobile-menu__link" href="./index.html#approach" data-mobile-menu-link>
+                        Approach
+                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                    </a>
+
+                    <a class="mobile-menu__link" href="./index.html#contact" data-mobile-menu-link>
+                        Contact
+                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                    </a>
+                </nav>
+
+                <div class="mobile-menu__services">
+                    <div class="mobile-menu__services-title">Services</div>
+
+                    <div class="mobile-menu__services-grid">
+                        <a class="mobile-menu__service-link" href="./google-ads.html" data-mobile-menu-link>
+                            <i data-lucide="badge-dollar-sign" aria-hidden="true"></i>
+                            <span>Google Ads</span>
+                            <i class="arrow-icon" data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+
+                        <a class="mobile-menu__service-link" href="./seo-optimization.html" data-mobile-menu-link>
+                            <i data-lucide="search-check" aria-hidden="true"></i>
+                            <span>SEO Optimization</span>
+                            <i class="arrow-icon" data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+
+                        <a class="mobile-menu__service-link" href="./social-media-marketing.html" data-mobile-menu-link>
+                            <i data-lucide="megaphone" aria-hidden="true"></i>
+                            <span>Social Media Marketing</span>
+                            <i class="arrow-icon" data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+
+                        <a class="mobile-menu__service-link is-active" href="./web-design.html" data-mobile-menu-link>
+                            <i data-lucide="layout-template" aria-hidden="true"></i>
+                            <span>Web Design</span>
+                            <i class="arrow-icon" data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+
+                        <a class="mobile-menu__service-link" href="./conversion-boost.html" data-mobile-menu-link>
+                            <i data-lucide="mouse-pointer-click" aria-hidden="true"></i>
+                            <span>Conversion Boost</span>
+                            <i class="arrow-icon" data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+
+                        <a class="mobile-menu__service-link" href="./local-seo.html" data-mobile-menu-link>
+                            <i data-lucide="map-pin-check" aria-hidden="true"></i>
+                            <span>Local SEO</span>
+                            <i class="arrow-icon" data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile-menu__bottom">
+                <div class="mobile-menu__contact">
+                    <a class="mobile-menu__contact-link" href="mailto:support@rarogads.com" data-email-link>
+                        <i data-lucide="mail" aria-hidden="true"></i>
+                        <span data-email-text>support@rarogads.com</span>
+                    </a>
+
+                    <a class="mobile-menu__contact-link"
+                        href="https://www.google.com/maps/search/?api=1&query=Černockého%209983%2F5A%2C%20Bratislava%20Rača%20831%2053%2C%20Slovenská%20republika"
+                        target="_blank" rel="noopener noreferrer" data-map-link>
+                        <i data-lucide="map-pin" aria-hidden="true"></i>
+                        <span data-address-text>Černockého 9983/5A, Bratislava - mestská časť Rača, 831 53, Slovenská
+                            republika</span>
+                    </a>
+                </div>
+
+                <div class="mobile-menu__legal">
+                    <a href="./privacy-policy.html" data-mobile-menu-link>Privacy</a>
+                    <a href="./terms-of-service.html" data-mobile-menu-link>Terms</a>
+                    <a href="./cookie-policy.html" data-mobile-menu-link>Cookies</a>
+                </div>
+            </div>
+        </aside>
+
+        <main id="main">
+            <!-- =========================
+        1. SERVICE HERO
+      ========================== -->
+            <section class="page-hero service-hero">
+                <div class="page-hero__bg" aria-hidden="true">
+                    <img src="./assets/images/web-design-hero.jpg" alt="" width="1800" height="980" />
+                </div>
+
+                <div class="container">
+                    <div class="page-hero__content">
+                        <div>
+                            <p class="section-kicker">Conversion-aware websites</p>
+
+                            <h1 class="page-hero__title">
+                                Web design built for clarity, trust, and <span>stronger user action.</span>
+                            </h1>
+
+                            <div class="page-hero__meta">
+                                <span class="pill">Responsive layouts</span>
+                                <span class="pill">UX clarity</span>
+                                <span class="pill">Contact flow</span>
+                            </div>
+                        </div>
+
+                        <p class="page-hero__text">
+                            Rarog Group creates clean, responsive, conversion-aware website structures that help
+                            users understand offers, navigate pages, and take action with less friction.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================
+        2. BREADCRUMB / SERVICE NAV
+      ========================== -->
+            <section class="service-nav-section" aria-label="Service navigation">
+                <div class="container">
+                    <div class="service-nav-section__inner">
+                        <nav class="breadcrumbs" aria-label="Breadcrumb">
+                            <a href="./index.html">Home</a>
+                            <span class="breadcrumbs__separator">/</span>
+                            <a href="./index.html#services">Services</a>
+                            <span class="breadcrumbs__separator">/</span>
+                            <span>Web Design</span>
+                        </nav>
+
+                        <div class="service-mini-nav" aria-label="Other services">
+                            <a class="service-mini-nav__link" href="./google-ads.html">Google Ads</a>
+                            <a class="service-mini-nav__link" href="./seo-optimization.html">SEO</a>
+                            <a class="service-mini-nav__link" href="./social-media-marketing.html">Social</a>
+                            <a class="service-mini-nav__link is-active" href="./web-design.html">Web Design</a>
+                            <a class="service-mini-nav__link" href="./conversion-boost.html">Conversion</a>
+                            <a class="service-mini-nav__link" href="./local-seo.html">Local SEO</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================
+        3. SERVICE OVERVIEW
+      ========================== -->
+            <section class="section section--light service-overview">
+                <div class="container">
+                    <div class="service-overview__grid">
+                        <div class="service-overview__content">
+                            <p class="section-kicker">Service overview</p>
+
+                            <h2 class="section-title">
+                                A website should not only look premium. It should make the next step obvious.
+                            </h2>
+
+                            <p class="section-text">
+                                Rarog Group designs website structures that support business communication,
+                                campaign traffic, mobile usability, and conversion paths. The focus is on clear
+                                hierarchy, strong spacing, polished visual direction, and pages that feel easy to use.
+                            </p>
+
+                            <p class="service-overview__extra">
+                                Web design connects brand perception with practical user behavior. When pages are
+                                organized well, users can understand the offer faster and move toward contact with
+                                less friction.
+                            </p>
+                        </div>
+
+                        <div class="service-overview__media">
+                            <img src="./assets/images/web-design-detail.jpg"
+                                alt="Web design workspace with responsive layouts, laptop screens, and UX planning notes"
+                                width="900" height="980" />
+
+                            <div class="service-overview__media-card">
+                                <i data-lucide="layout-template" aria-hidden="true"></i>
+                                <div>
+                                    <span>Design focus</span>
+                                    <strong>UX · Structure · Mobile · Conversion</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================
+        4. WHAT THIS SERVICE IMPROVES
+      ========================== -->
+            <section class="section section--dark service-improves">
+                <div class="container">
+                    <div class="section-head">
+                        <div class="section-head__content">
+                            <p class="section-kicker">What this service improves</p>
+
+                            <h2 class="section-title">
+                                Cleaner digital experiences for users who need answers quickly.
+                            </h2>
+                        </div>
+
+                        <p class="section-head__aside">
+                            Rarog Group improves the website elements that shape first impression, readability,
+                            trust, navigation, and conversion-focused movement.
+                        </p>
+                    </div>
+
+                    <div class="improvement-grid">
+                        <article class="improvement-card">
+                            <i data-lucide="monitor-smartphone" aria-hidden="true"></i>
+                            <h3>Responsive structure</h3>
+                            <p>
+                                Build layouts that adapt cleanly across mobile, small tablets, tablets, desktops,
+                                and large screens without horizontal overflow.
+                            </p>
+                        </article>
+
+                        <article class="improvement-card">
+                            <i data-lucide="panel-top" aria-hidden="true"></i>
+                            <h3>Landing page clarity</h3>
+                            <p>
+                                Shape page sections around user questions, offer understanding, proof points, and
+                                clear movement toward action.
+                            </p>
+                        </article>
+
+                        <article class="improvement-card">
+                            <i data-lucide="mouse-pointer-click" aria-hidden="true"></i>
+                            <h3>Conversion-aware layouts</h3>
+                            <p>
+                                Position CTAs, forms, contact details, and service information so users can act
+                                without confusion or unnecessary friction.
+                            </p>
+                        </article>
+
+                        <article class="improvement-card">
+                            <i data-lucide="eye" aria-hidden="true"></i>
+                            <h3>Visual hierarchy</h3>
+                            <p>
+                                Use typography, spacing, contrast, and content rhythm to make important messages
+                                easier to scan and understand.
+                            </p>
+                        </article>
+
+                        <article class="improvement-card">
+                            <i data-lucide="smartphone" aria-hidden="true"></i>
+                            <h3>Mobile usability</h3>
+                            <p>
+                                Keep mobile sections compact, readable, easy to tap, and visually complete without
+                                oversized gaps or broken stacking.
+                            </p>
+                        </article>
+
+                        <article class="improvement-card">
+                            <i data-lucide="send" aria-hidden="true"></i>
+                            <h3>Contact flow</h3>
+                            <p>
+                                Improve the route from service interest to contact so the user always understands
+                                what to do next.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================
+        5. WHY IT MATTERS
+      ========================== -->
+            <section class="section section--ivory service-matters">
+                <div class="container">
+                    <div class="service-matters__grid">
+                        <div>
+                            <p class="section-kicker">Why it matters</p>
+
+                            <h2 class="section-title">
+                                Your website is where campaign attention becomes a real decision.
+                            </h2>
+                        </div>
+
+                        <div class="service-matters__text">
+                            <p>
+                                Paid ads, SEO, social media, and local search all send users somewhere. If that
+                                destination feels confusing, slow, generic, or hard to use, the marketing system loses
+                                strength.
+                            </p>
+
+                            <p>
+                                Rarog Group treats web design as the central experience layer of digital marketing:
+                                the place where users understand the offer, compare value, and decide whether to
+                                contact the business.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================
+        6. RAROG METHOD
+      ========================== -->
+            <section class="section section--deep service-method">
+                <div class="container">
+                    <div class="section-head">
+                        <div class="section-head__content">
+                            <p class="section-kicker">Rarog method</p>
+
+                            <h2 class="section-title">
+                                A design workflow built around clarity before decoration.
+                            </h2>
+                        </div>
+
+                        <p class="section-head__aside">
+                            The method balances premium visual style with practical UX, content structure, and
+                            conversion-aware page flow.
+                        </p>
+                    </div>
+
+                    <div class="method-list">
+                        <article class="method-list__item">
+                            <i data-lucide="map" aria-hidden="true"></i>
+                            <div>
+                                <h3>Define page goals</h3>
+                                <p>
+                                    Clarify what each page should communicate, what users need to understand, and what
+                                    action the page should support.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="method-list__item">
+                            <i data-lucide="layout-dashboard" aria-hidden="true"></i>
+                            <div>
+                                <h3>Build the content structure</h3>
+                                <p>
+                                    Organize hero sections, service explanations, trust signals, CTAs, and contact
+                                    routes into a clean page hierarchy.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="method-list__item">
+                            <i data-lucide="type" aria-hidden="true"></i>
+                            <div>
+                                <h3>Shape visual hierarchy</h3>
+                                <p>
+                                    Use typography, spacing, contrast, and section rhythm to create a premium design
+                                    that remains readable and practical.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="method-list__item">
+                            <i data-lucide="smartphone" aria-hidden="true"></i>
+                            <div>
+                                <h3>Adapt for every screen</h3>
+                                <p>
+                                    Make the experience work cleanly across small mobile screens, large mobile, iPad
+                                    widths, desktop, and wide displays.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="method-list__item">
+                            <i data-lucide="clipboard-check" aria-hidden="true"></i>
+                            <div>
+                                <h3>Review usability and action paths</h3>
+                                <p>
+                                    Check whether users can scan the page, understand the offer, reach contact points,
+                                    and move through the site without friction.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================
+        7. DELIVERABLES / FOCUS AREAS
+      ========================== -->
+            <section class="section section--light service-deliverables">
+                <div class="container">
+                    <div class="service-deliverables__grid">
+                        <div class="service-deliverables__panel">
+                            <p class="section-kicker">Deliverables</p>
+
+                            <h2 class="section-title">
+                                Practical web design outputs for a clearer digital presence.
+                            </h2>
+
+                            <p class="section-text">
+                                The exact design direction depends on the brand, content, service structure, and
+                                campaign goals, but the result should always feel polished, responsive, and easy to use.
+                            </p>
+                        </div>
+
+                        <div class="deliverables-list">
+                            <article class="deliverables-list__item">
+                                <i data-lucide="check" aria-hidden="true"></i>
+                                <span>Website structure direction</span>
+                            </article>
+
+                            <article class="deliverables-list__item">
+                                <i data-lucide="check" aria-hidden="true"></i>
+                                <span>Landing page layout planning</span>
+                            </article>
+
+                            <article class="deliverables-list__item">
+                                <i data-lucide="check" aria-hidden="true"></i>
+                                <span>Responsive design guidance</span>
+                            </article>
+
+                            <article class="deliverables-list__item">
+                                <i data-lucide="check" aria-hidden="true"></i>
+                                <span>CTA and form flow recommendations</span>
+                            </article>
+
+                            <article class="deliverables-list__item">
+                                <i data-lucide="check" aria-hidden="true"></i>
+                                <span>UX clarity review</span>
+                            </article>
+
+                            <article class="deliverables-list__item">
+                                <i data-lucide="check" aria-hidden="true"></i>
+                                <span>Visual hierarchy system</span>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================
+        8. PERFORMANCE DIRECTION
+      ========================== -->
+            <section class="section section--dark service-promise">
+                <div class="container">
+                    <div class="service-promise__box">
+                        <div class="service-promise__icon">
+                            <i data-lucide="shield-check" aria-hidden="true"></i>
+                        </div>
+
+                        <div>
+                            <p class="section-kicker">No empty promises</p>
+
+                            <h2 class="section-title">
+                                Rarog Group does not promise guaranteed sales, leads, rankings, or revenue from design
+                                alone.
+                            </h2>
+
+                            <p class="section-text">
+                                Website performance can vary based on traffic quality, offer strength, page content,
+                                market demand, audience behavior, technical condition, and campaign strategy. Rarog
+                                Group focuses on clarity, usability, responsive structure, and stronger conversion
+                                paths.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =========================
+        9. FAQ / RELATED SERVICES CTA
+      ========================== -->
+            <section class="section section--ivory service-faq">
+                <div class="container">
+                    <div class="service-faq__grid">
+                        <div class="service-faq__content">
+                            <p class="section-kicker">Questions</p>
+
+                            <h2 class="section-title">
+                                Web design questions, answered with practical expectations.
+                            </h2>
+
+                            <div class="faq-list" data-faq-list>
+                                <article class="faq-item" data-faq-item>
+                                    <button class="faq-button" type="button" aria-expanded="false" data-faq-button>
+                                        <span class="faq-question">Is web design only about how the site looks?</span>
+                                        <span class="faq-icon" aria-hidden="true"></span>
+                                    </button>
+
+                                    <div class="faq-panel" data-faq-panel>
+                                        <div class="faq-panel__inner">
+                                            <p class="faq-answer">
+                                                No. Visual style matters, but strong web design also includes structure,
+                                                usability, content hierarchy, responsiveness, page speed direction, and
+                                                conversion flow.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="faq-item" data-faq-item>
+                                    <button class="faq-button" type="button" aria-expanded="false" data-faq-button>
+                                        <span class="faq-question">Do service pages need different content?</span>
+                                        <span class="faq-icon" aria-hidden="true"></span>
+                                    </button>
+
+                                    <div class="faq-panel" data-faq-panel>
+                                        <div class="faq-panel__inner">
+                                            <p class="faq-answer">
+                                                Yes. Service pages can follow one design system, but each page should
+                                                have
+                                                content that matches the specific service, audience, search intent, and
+                                                user
+                                                decision path.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <aside class="related-services" aria-label="Related services">
+                            <h3>Related services</h3>
+
+                            <p>
+                                Web design becomes stronger when SEO, campaign traffic, and conversion optimization
+                                are considered together.
+                            </p>
+
+                            <div class="related-services__links">
+                                <a href="./conversion-boost.html">
+                                    Conversion Boost
+                                    <i data-lucide="arrow-right" aria-hidden="true"></i>
+                                </a>
+
+                                <a href="./seo-optimization.html">
+                                    SEO Optimization
+                                    <i data-lucide="arrow-right" aria-hidden="true"></i>
+                                </a>
+
+                                <a href="./google-ads.html">
+                                    Google Ads
+                                    <i data-lucide="arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+
+                            <a class="btn btn-light" href="./index.html#contact">
+                                Contact Rarog Group
+                                <i data-lucide="send" aria-hidden="true"></i>
+                            </a>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- =========================
+      FOOTER
+    ========================== -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="site-footer__inner">
+                    <div class="site-footer__brand">
+                        <a class="site-logo site-logo--footer" href="./index.html#home" aria-label="Rarog Group home">
+                            <img src="./assets/icons/logo.svg" alt="Rarog Group logo" width="278" height="72" />
+                        </a>
+
+                        <p class="site-footer__text" data-footer-text>
+                            Rarog Group, s. r. o. is a Bratislava-based digital marketing and advertising agency
+                            focused on paid campaigns, search visibility, social media presence, conversion-aware
+                            websites, and measurable growth systems.
+                        </p>
+                    </div>
+
+                    <div class="site-footer__column">
+                        <h2 class="site-footer__title">Services</h2>
+
+                        <ul class="site-footer__list">
+                            <li><a class="site-footer__link" href="./google-ads.html">Google Ads</a></li>
+                            <li><a class="site-footer__link" href="./seo-optimization.html">SEO Optimization</a></li>
+                            <li><a class="site-footer__link" href="./social-media-marketing.html">Social Media
+                                    Marketing</a></li>
+                            <li><a class="site-footer__link is-active" href="./web-design.html">Web Design</a></li>
+                            <li><a class="site-footer__link" href="./conversion-boost.html">Conversion Boost</a></li>
+                            <li><a class="site-footer__link" href="./local-seo.html">Local SEO</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="site-footer__column">
+                        <h2 class="site-footer__title">Navigation</h2>
+
+                        <ul class="site-footer__list">
+                            <li><a class="site-footer__link" href="./index.html#home">Home</a></li>
+                            <li><a class="site-footer__link" href="./index.html#about">About</a></li>
+                            <li><a class="site-footer__link" href="./index.html#services">Services</a></li>
+                            <li><a class="site-footer__link" href="./index.html#process">Process</a></li>
+                            <li><a class="site-footer__link" href="./index.html#approach">Approach</a></li>
+                            <li><a class="site-footer__link" href="./index.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="site-footer__column">
+                        <h2 class="site-footer__title">Contact</h2>
+
+                        <ul class="site-footer__list">
+                            <li>
+                                <a class="site-footer__link" href="mailto:support@rarogads.com" data-email-link>
+                                    <i data-lucide="mail" aria-hidden="true"></i>
+                                    <span data-email-text>support@rarogads.com</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="site-footer__link"
+                                    href="https://www.google.com/maps/search/?api=1&query=Černockého%209983%2F5A%2C%20Bratislava%20Rača%20831%2053%2C%20Slovenská%20republika"
+                                    target="_blank" rel="noopener noreferrer" data-map-link>
+                                    <i data-lucide="map-pin" aria-hidden="true"></i>
+                                    <span data-address-text>Černockého 9983/5A, Bratislava - mestská časť Rača, 831 53,
+                                        Slovenská republika</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="site-footer__bottom">
+                    <p data-footer-copy>© 2026 Rarog Group, s. r. o. All rights reserved.</p>
+
+                    <div class="site-footer__bottom-links">
+                        <a href="./privacy-policy.html">Privacy Policy</a>
+                        <a href="./terms-of-service.html">Terms of Service</a>
+                        <a href="./cookie-policy.html">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- =========================
+      COOKIE BANNER
+    ========================== -->
+        <div class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie preferences" data-cookie-banner>
+            <div class="cookie-banner__inner">
+                <div>
+                    <h2 class="cookie-banner__title" data-cookie-title>Privacy preferences</h2>
+
+                    <p class="cookie-banner__text" data-cookie-text>
+                        We use essential cookies to support website functionality and may use limited analytics
+                        signals to understand website performance. You can accept or decline non-essential cookies.
+                    </p>
+
+                    <div class="cookie-banner__links">
+                        <a href="./privacy-policy.html">Privacy Policy</a>
+                        <a href="./cookie-policy.html">Cookie Policy</a>
+                        <a href="./terms-of-service.html">Terms of Service</a>
+                    </div>
+                </div>
+
+                <div class="cookie-banner__actions">
+                    <button class="cookie-banner__button cookie-banner__button--decline" type="button"
+                        data-cookie-decline>
+                        Decline
+                    </button>
+
+                    <button class="cookie-banner__button cookie-banner__button--accept" type="button"
+                        data-cookie-accept>
+                        Accept
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script src="./js/config.js"></script>
+    <script src="./js/services.js"></script>
+</body>
+
+</html>
