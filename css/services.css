@@ -1835,3 +1835,102 @@
         text-align: center;
     }
 }
+
+/* =========================
+   SERVICE FOCUS STRIP — POINT CARDS HOVER
+========================= */
+
+.service-focus-strip__points article {
+    position: relative !important;
+    overflow: hidden !important;
+    padding: 20px 18px !important;
+    border: 1px solid rgba(248, 246, 239, 0.16) !important;
+    border-radius: 22px !important;
+    background: rgba(11, 13, 10, 0.34) !important;
+    backdrop-filter: blur(12px);
+    transition:
+        transform var(--transition-base),
+        background var(--transition-base),
+        border-color var(--transition-base),
+        box-shadow var(--transition-base),
+        filter var(--transition-base) !important;
+}
+
+/* мягкий внутренний блик */
+.service-focus-strip__points article::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(135deg,
+            rgba(255, 255, 255, 0.14),
+            rgba(255, 255, 255, 0.035) 46%,
+            rgba(0, 0, 0, 0.18));
+    transition: opacity var(--transition-base);
+}
+
+/* тонкая нижняя линия */
+.service-focus-strip__points article::after {
+    content: "";
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 0;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 999px;
+    background: linear-gradient(90deg,
+            rgba(248, 246, 239, 0.9),
+            rgba(248, 246, 239, 0));
+    transition: transform var(--transition-base);
+}
+
+.service-focus-strip__points article:hover {
+    transform: translateY(-4px) !important;
+    border-color: rgba(248, 246, 239, 0.28) !important;
+    background: rgba(11, 13, 10, 0.56) !important;
+    box-shadow:
+        0 22px 50px rgba(0, 0, 0, 0.32),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+    filter: brightness(1.04);
+}
+
+.service-focus-strip__points article:hover::before {
+    opacity: 1;
+}
+
+.service-focus-strip__points article:hover::after {
+    transform: scaleX(1);
+}
+
+.service-focus-strip__points article span,
+.service-focus-strip__points article p {
+    position: relative;
+    z-index: 1;
+}
+
+.service-focus-strip__points article:hover span {
+    color: #ffffff !important;
+}
+
+.service-focus-strip__points article:hover p {
+    color: rgba(248, 246, 239, 0.76) !important;
+}
+
+/* mobile — мягче */
+@media (max-width: 760px) {
+    .service-focus-strip__points article {
+        padding: 18px 16px !important;
+        border-radius: 20px !important;
+    }
+
+    .service-focus-strip__points article:hover {
+        transform: translateY(-2px) !important;
+        box-shadow:
+            0 16px 34px rgba(0, 0, 0, 0.26),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+    }
+}
