@@ -29,7 +29,7 @@
     --color-text-muted: #8D9287;
     --color-text-soft: #C7CBBF;
 
-    /* Bright yellow accent */
+    
     --color-logo-lime: #FFE761;
 
     --color-accent: #FFE761;
@@ -43,9 +43,9 @@
     --shadow-accent: 0 16px 38px rgba(255, 231, 97, 0.16);
 }
 
-/* =========================
-   RESET / FOUNDATION
-========================= */
+
+
+
 
 *,
 *::before,
@@ -171,9 +171,9 @@ figure {
     }
 }
 
-/* =========================
-   GLOBAL LAYOUT
-========================= */
+
+
+
 
 html {
     overflow-x: hidden;
@@ -323,9 +323,9 @@ section[id],
     box-shadow: 0 0 0 7px rgba(255, 231, 97, 0.12);
 }
 
-/* =========================
-   SKIP LINK
-========================= */
+
+
+
 
 .skip-link {
     position: fixed;
@@ -345,9 +345,9 @@ section[id],
     transform: translateY(0);
 }
 
-/* =========================
-   BUTTONS / LINKS
-========================= */
+
+
+
 
 .btn {
     position: relative;
@@ -459,9 +459,9 @@ section[id],
     transform: translateX(4px);
 }
 
-/* =========================
-   GLOBAL BADGES / CARDS
-========================= */
+
+
+
 
 .pill-list {
     display: flex;
@@ -542,9 +542,9 @@ section[id],
     pointer-events: none;
 }
 
-/* =========================
-   HEADER
-========================= */
+
+
+
 
 .site-header {
     position: fixed;
@@ -699,9 +699,9 @@ section[id],
     background: rgba(255, 231, 97, 0.1);
 }
 
-/* =========================
-   SERVICES DROPDOWN
-========================= */
+
+
+
 
 .services-dropdown {
     position: absolute;
@@ -799,9 +799,9 @@ section[id],
     line-height: 1.35;
 }
 
-/* =========================
-   MOBILE MENU BUTTON
-========================= */
+
+
+
 
 .mobile-menu-button {
     display: none;
@@ -828,9 +828,9 @@ section[id],
     height: 22px;
 }
 
-/* =========================
-   MOBILE MENU
-========================= */
+
+
+
 
 .mobile-menu {
     position: fixed;
@@ -1046,9 +1046,9 @@ section[id],
     color: var(--color-accent);
 }
 
-/* =========================
-   FORMS
-========================= */
+
+
+
 
 .form-grid {
     display: grid;
@@ -1224,9 +1224,9 @@ section[id],
     border: 1px solid rgba(255, 112, 112, 0.36);
 }
 
-/* =========================
-   FOOTER
-========================= */
+
+
+
 
 .site-footer {
     position: relative;
@@ -1343,9 +1343,9 @@ section[id],
     color: var(--color-accent);
 }
 
-/* =========================
-   COOKIE BANNER
-========================= */
+
+
+
 
 .cookie-banner {
     position: fixed;
@@ -1460,9 +1460,9 @@ section[id],
     transform: translateY(-1px);
 }
 
-/* =========================
-   BREADCRUMBS / PAGE COMMON
-========================= */
+
+
+
 
 .breadcrumbs {
     display: flex;
@@ -1554,9 +1554,9 @@ section[id],
     margin-top: 26px;
 }
 
-/* =========================
-   ACCORDION
-========================= */
+
+
+
 
 .faq-list {
     display: grid;
@@ -1654,9 +1654,9 @@ section[id],
     color: rgba(23, 25, 21, 0.66);
 }
 
-/* =========================
-   RESPONSIVE BASE
-========================= */
+
+
+
 
 @media (max-width: 1180px) {
     :root {
@@ -1870,9 +1870,9 @@ section[id],
     }
 }
 
-/* =========================
-   FINAL GLOBAL YELLOW ACCENT OVERRIDE
-========================= */
+
+
+
 
 body {
     background:
@@ -1968,4 +1968,56 @@ body {
 
 .site-footer::before {
     background: linear-gradient(90deg, transparent, rgba(255, 231, 97, 0.64), transparent) !important;
+}
+
+/* =========================
+   MOBILE MENU — HIDE SCROLLBAR VISUALLY
+   scroll works, scrollbar hidden
+========================= */
+
+.mobile-menu,
+.mobile-menu__body,
+.mobile-menu__services,
+.mobile-menu__services-grid,
+.mobile-menu__bottom {
+    scrollbar-width: none !important;
+    /* Firefox */
+    -ms-overflow-style: none !important;
+    /* old Edge / IE */
+}
+
+/* Chrome / Safari / Edge */
+.mobile-menu::-webkit-scrollbar,
+.mobile-menu__body::-webkit-scrollbar,
+.mobile-menu__services::-webkit-scrollbar,
+.mobile-menu__services-grid::-webkit-scrollbar,
+.mobile-menu__bottom::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+    display: none !important;
+    background: transparent !important;
+}
+
+/* сам скролл оставляем рабочим */
+.mobile-menu {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+.mobile-menu__body {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* чтобы страница под открытым меню не скроллилась */
+body.menu-open {
+    overflow: hidden !important;
+    height: 100vh !important;
+}
+
+/* на всякий случай для мобильных браузеров */
+body.menu-open .page-shell {
+    overflow: hidden !important;
 }

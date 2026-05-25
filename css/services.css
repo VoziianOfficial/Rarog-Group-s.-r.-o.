@@ -1,6 +1,6 @@
-/* =========================
-   SERVICE HERO
-========================= */
+
+
+
 
 .service-hero {
     min-height: 620px;
@@ -14,9 +14,9 @@
     max-width: 520px;
 }
 
-/* =========================
-   BREADCRUMB / SERVICE NAV
-========================= */
+
+
+
 
 .service-nav-section {
     position: relative;
@@ -69,9 +69,9 @@
     transform: translateY(-1px);
 }
 
-/* =========================
-   SERVICE OVERVIEW
-========================= */
+
+
+
 
 .service-overview {
     overflow: hidden;
@@ -167,9 +167,9 @@
     letter-spacing: -0.04em;
 }
 
-/* =========================
-   IMPROVEMENT GRID
-========================= */
+
+
+
 
 .service-improves {
     overflow: hidden;
@@ -257,9 +257,9 @@
     line-height: 1.72;
 }
 
-/* =========================
-   WHY IT MATTERS
-========================= */
+
+
+
 
 .service-matters {
     overflow: hidden;
@@ -285,9 +285,9 @@
     line-height: 1.82;
 }
 
-/* =========================
-   RAROG METHOD
-========================= */
+
+
+
 
 .service-method {
     overflow: hidden;
@@ -356,9 +356,9 @@
     line-height: 1.75;
 }
 
-/* =========================
-   DELIVERABLES
-========================= */
+
+
+
 
 .service-deliverables {
     overflow: hidden;
@@ -417,9 +417,9 @@
     stroke-width: 2.6;
 }
 
-/* =========================
-   NO EMPTY PROMISES
-========================= */
+
+
+
 
 .service-promise {
     overflow: hidden;
@@ -474,9 +474,9 @@
     margin-bottom: 24px;
 }
 
-/* =========================
-   FAQ / RELATED
-========================= */
+
+
+
 
 .service-faq {
     overflow: hidden;
@@ -555,9 +555,9 @@
     transform: translateX(4px);
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+
+
+
 
 @media (max-width: 1180px) {
     .service-hero {
@@ -765,16 +765,16 @@
     }
 }
 
-/* =========================
-   SERVICE HERO — SOFT PHOTO VISIBILITY FIX
-========================= */
+
+
+
 
 .service-hero {
     position: relative !important;
     overflow: hidden !important;
 }
 
-/* мягко делаем фото виднее, без пересвета */
+
 .service-hero img,
 .service-hero .page-hero__bg img,
 .service-hero .page-hero__image,
@@ -782,13 +782,13 @@
     filter: brightness(1.12) saturate(1.06) contrast(1.02) !important;
 }
 
-/* если фото задано через background/pseudo */
+
 .service-hero::before,
 .service-hero .page-hero__bg::before {
     filter: brightness(1.12) saturate(1.06) contrast(1.02) !important;
 }
 
-/* overlay оставляем тёмным, но не таким плотным */
+
 .service-hero::after,
 .service-hero .page-hero__bg::after,
 .service-hero .page-hero__overlay {
@@ -802,13 +802,13 @@
             rgba(5, 6, 5, 0.58) 100%) !important;
 }
 
-/* если общий page-hero overlay слишком сильный */
+
 .page-hero.service-hero::after,
 .page-hero.service-hero::before {
     opacity: 0.9 !important;
 }
 
-/* текст читаемый, но без тяжелой тени */
+
 .service-hero .page-hero__title,
 .service-hero h1 {
     text-shadow: 0 3px 22px rgba(0, 0, 0, 0.48) !important;
@@ -819,10 +819,10 @@
     text-shadow: 0 2px 16px rgba(0, 0, 0, 0.38) !important;
 }
 
-/* =========================
-   IMPROVEMENT CARDS — TABLET / MOBILE COMPACT
-   icon top-right, lower card height
-========================= */
+
+
+
+
 
 @media (max-width: 1180px) {
     .improvement-card {
@@ -888,10 +888,10 @@
         padding-right: 46px !important;
     }
 }
-/* =========================
-   GLOBAL SECTION KICKER — SAME AS HOME PAGE
-   for all service pages
-========================= */
+
+
+
+
 
 .section-kicker {
     position: relative !important;
@@ -912,7 +912,7 @@
     text-transform: uppercase !important;
 }
 
-/* левая вертикальная линия */
+
 .section-kicker::before {
     content: "" !important;
     position: absolute !important;
@@ -926,7 +926,7 @@
     opacity: 1 !important;
 }
 
-/* нижняя линия */
+
 .section-kicker::after {
     content: "" !important;
     position: absolute !important;
@@ -940,7 +940,7 @@
             rgba(255, 231, 97, 0)) !important;
 }
 
-/* светлые секции */
+
 .section--light .section-kicker,
 .section--ivory .section-kicker,
 .service-overview .section-kicker,
@@ -950,7 +950,7 @@
     color: #171915 !important;
 }
 
-/* тёмные секции */
+
 .section--dark .section-kicker,
 .section--deep .section-kicker,
 .page-hero .section-kicker,
@@ -961,12 +961,12 @@
     color: #F8F6EF !important;
 }
 
-/* если kicker внутри светлого блока, даже если сама секция тёмная */
+
 .related-services .section-kicker {
     color: #171915 !important;
 }
 
-/* mobile */
+
 @media (max-width: 760px) {
     .section-kicker {
         margin-bottom: 16px !important;
@@ -983,11 +983,11 @@
     }
 }
 
-/* =========================
-   SERVICE FAQ — HOVERS WITHOUT YELLOW
-========================= */
 
-/* FAQ items */
+
+
+
+
 .service-faq .faq-item {
     position: relative !important;
     overflow: hidden !important;
@@ -1041,7 +1041,7 @@
     color: #171915 !important;
 }
 
-/* icon hover without yellow */
+
 .service-faq .faq-icon {
     transition:
         transform var(--transition-base),
@@ -1057,7 +1057,7 @@
     box-shadow: 0 10px 24px rgba(20, 24, 18, 0.1) !important;
 }
 
-/* Related services card */
+
 .service-faq .related-services {
     transition:
         transform var(--transition-base),
@@ -1078,7 +1078,7 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.74) !important;
 }
 
-/* Related links hover without yellow */
+
 .service-faq .related-services__links a {
     transition:
         color var(--transition-base),
@@ -1097,68 +1097,68 @@
     transform: translateX(5px) !important;
 }
 
-/* button inside related card */
+
 .service-faq .related-services .btn:hover {
     box-shadow: 0 18px 38px rgba(20, 24, 18, 0.16) !important;
 }
 
-/* =========================
-   SERVICE FAQ — ICON COLOR FIX
-   replace yellow icons on light background
-========================= */
 
-/* стрелки в Related services */
+
+
+
+
+
 .service-faq .related-services__links svg {
     color: #171915 !important;
     stroke: #171915 !important;
 }
 
-/* иконка в кнопке Contact Rarog Group */
+
 .service-faq .related-services .btn svg {
     color: currentColor !important;
     stroke: currentColor !important;
 }
 
-/* если FAQ icon сделан через svg */
+
 .service-faq .faq-button svg,
 .service-faq .faq-icon svg {
     color: #171915 !important;
     stroke: #171915 !important;
 }
 
-/* если FAQ icon сделан через before/after */
+
 .service-faq .faq-icon::before,
 .service-faq .faq-icon::after {
     background: #171915 !important;
 }
 
-/* hover без желтого */
+
 .service-faq .related-services__links a:hover svg,
 .service-faq .faq-item:hover .faq-button svg,
 .service-faq .faq-item.is-open .faq-button svg {
     color: #0B0D0A !important;
     stroke: #0B0D0A !important;
 }
-/* =========================
-   DELIVERABLES — CHECK ICON COLOR FIX
-========================= */
+
+
+
 
 .deliverables-list__item svg {
     color: #171915 !important;
     stroke: #171915 !important;
 }
 
-/* при hover оставляем тоже тёмными, без жёлтого */
+
 .deliverables-list__item:hover svg {
     color: #0B0D0A !important;
     stroke: #0B0D0A !important;
 }
 
-/* если хочешь чуть мягче, можно заменить #171915 на #3A3D34 */
 
-/* =========================
-   DELIVERABLES — NON-YELLOW CARD HOVERS
-========================= */
+
+
+
+
 
 .deliverables-list__item {
     position: relative !important;
@@ -1170,14 +1170,14 @@
         box-shadow var(--transition-base) !important;
 }
 
-/* убираем любые старые желтые эффекты */
+
 .deliverables-list__item::before,
 .deliverables-list__item::after {
     content: none !important;
     display: none !important;
 }
 
-/* hover без желтого */
+
 .deliverables-list__item:hover {
     transform: translateY(-2px) !important;
     border-color: rgba(20, 24, 18, 0.22) !important;
@@ -1190,7 +1190,7 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.78) !important;
 }
 
-/* галочки тоже без желтого */
+
 .deliverables-list__item svg {
     color: #171915 !important;
     stroke: #171915 !important;
@@ -1206,19 +1206,19 @@
     transform: scale(1.08) !important;
 }
 
-/* текст при hover — чуть четче */
+
 .deliverables-list__item:hover span {
     color: #171915 !important;
 }
 
-/* =========================
-   SERVICE PAGES — MOBILE CENTERED H1 / H2
-   all service pages
-========================= */
+
+
+
+
 
 @media (max-width: 760px) {
 
-    /* HERO H1 */
+    
     .page-hero__content,
     .service-hero .page-hero__content {
         width: 100% !important;
@@ -1273,7 +1273,7 @@
         margin-inline: auto !important;
     }
 
-    /* ALL SERVICE PAGE H2 */
+    
     .section-title,
     .section-head .section-title,
     .service-overview .section-title,
@@ -1291,7 +1291,7 @@
         letter-spacing: -0.06em !important;
     }
 
-    /* чтобы блоки с h2 тоже центрировались */
+    
     .section-head,
     .section-head__content,
     .service-overview__content,
@@ -1321,7 +1321,7 @@
     }
 }
 
-/* very small phones */
+
 @media (max-width: 480px) {
 
     .page-hero__title,
@@ -1336,10 +1336,10 @@
     }
 }
 
-/* =========================
-   SERVICE HERO — TABLET H1 CENTERED
-   only service pages / tablet only
-========================= */
+
+
+
+
 
 @media (min-width: 761px) and (max-width: 1180px) {
     body[data-page="service"] .service-hero .page-hero__content {
@@ -1383,10 +1383,10 @@
     }
 }
 
-/* =========================
-   IMPROVEMENT CARDS — SMALLER ICONS ON TABLET / MOBILE
-   no background
-========================= */
+
+
+
+
 
 @media (max-width: 1180px) {
     .improvement-card>svg {
@@ -1423,9 +1423,9 @@
         padding-right: 38px !important;
     }
 }
-/* =========================
-   METHOD LIST — MOBILE ICON TOP RIGHT
-========================= */
+
+
+
 
 @media (max-width: 760px) {
     .method-list__item {
@@ -1468,9 +1468,9 @@
     }
 }
 
-/* =========================
-   SERVICE FIT
-========================= */
+
+
+
 
 .service-fit {
     position: relative;
@@ -1598,10 +1598,10 @@
     }
 }
 
-/* =========================
-   SERVICE FOCUS STRIP
-   dark horizontal background-photo section
-========================= */
+
+
+
+
 
 .service-focus-strip {
     position: relative;
@@ -1740,7 +1740,7 @@
     stroke-width: 2;
 }
 
-/* фото для каждой service-page */
+
 .service-focus-strip--google {
     --service-focus-image: url("../assets/images/service-card.jpg");
 }
@@ -1765,7 +1765,7 @@
     --service-focus-image: url("../assets/images/service-card.jpg");
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .service-focus-strip__inner {
         grid-template-columns: 1fr;
@@ -1782,7 +1782,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 760px) {
     .service-focus-strip::before {
         background-position: center;
@@ -1836,9 +1836,9 @@
     }
 }
 
-/* =========================
-   SERVICE FOCUS STRIP — POINT CARDS HOVER
-========================= */
+
+
+
 
 .service-focus-strip__points article {
     position: relative !important;
@@ -1856,7 +1856,7 @@
         filter var(--transition-base) !important;
 }
 
-/* мягкий внутренний блик */
+
 .service-focus-strip__points article::before {
     content: "";
     position: absolute;
@@ -1871,7 +1871,7 @@
     transition: opacity var(--transition-base);
 }
 
-/* тонкая нижняя линия */
+
 .service-focus-strip__points article::after {
     content: "";
     position: absolute;
@@ -1920,7 +1920,7 @@
     color: rgba(248, 246, 239, 0.76) !important;
 }
 
-/* mobile — мягче */
+
 @media (max-width: 760px) {
     .service-focus-strip__points article {
         padding: 18px 16px !important;
@@ -1935,18 +1935,18 @@
     }
 }
 
-/* =========================
-   GOOGLE SERVICE FOCUS STRIP — BRIGHTER PHOTO
-========================= */
 
-/* делаем само фото ярче */
+
+
+
+
 .service-focus-strip--google::before {
     filter: brightness(1.08) saturate(1.16) contrast(1.05) !important;
     opacity: 1 !important;
     transform: scale(1.02) !important;
 }
 
-/* ослабляем затемнение, чтобы графика была виднее */
+
 .service-focus-strip--google::after {
     background:
         linear-gradient(90deg,
@@ -1958,7 +1958,7 @@
             rgba(5, 6, 5, 0.48) 100%) !important;
 }
 
-/* на мобилке оставляем чуть темнее, чтобы текст читался */
+
 @media (max-width: 760px) {
     .service-focus-strip--google::before {
         filter: brightness(0.92) saturate(1.12) contrast(1.04) !important;

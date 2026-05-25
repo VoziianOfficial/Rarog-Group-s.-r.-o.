@@ -1,6 +1,6 @@
-/* =========================
-   HOMEPAGE SIDE NAV
-========================= */
+
+
+
 
 .home-side-nav {
     position: fixed;
@@ -65,9 +65,9 @@
     box-shadow: 0 0 0 7px rgba(255, 231, 97, 0.12);
 }
 
-/* =========================
-   HERO LIKE REFERENCE IMAGE
-========================= */
+
+
+
 
 .home-hero {
     position: relative;
@@ -194,7 +194,7 @@
     transform: translateY(-2px);
 }
 
-/* отключаем старые элементы, если где-то остались */
+
 .home-hero__grid,
 .home-hero__visual,
 .home-hero__image-wrap,
@@ -206,9 +206,9 @@
     display: none;
 }
 
-/* =========================
-   HERO RESPONSIVE
-========================= */
+
+
+
 
 @media (max-width: 1180px) {
     .home-hero {
@@ -308,9 +308,9 @@
 }
 
 
-/* =========================
-   FINAL HERO TITLE FIX
-========================= */
+
+
+
 
 .home-hero__content {
     max-width: 720px !important;
@@ -338,9 +338,9 @@
     }
 }
 
-/* =========================
-   STATEMENT STRIP
-========================= */
+
+
+
 
 .statement-strip {
     overflow: hidden;
@@ -390,9 +390,9 @@
     }
 }
 
-/* =========================
-   ABOUT
-========================= */
+
+
+
 
 .home-about {
     overflow: hidden;
@@ -499,9 +499,9 @@
     line-height: 1.7;
 }
 
-/* =========================
-   SERVICES SWIPER
-========================= */
+
+
+
 
 .home-services {
     overflow: hidden;
@@ -697,9 +697,9 @@
     background: var(--color-accent);
 }
 
-/* =========================
-   GROWTH SYSTEM
-========================= */
+
+
+
 
 .growth-system__grid {
     display: grid;
@@ -812,9 +812,9 @@
     flex: 0 0 auto;
 }
 
-/* =========================
-   PROCESS
-========================= */
+
+
+
 
 .home-process::before {
     content: "";
@@ -893,9 +893,9 @@
     letter-spacing: -0.045em;
 }
 
-/* =========================
-   WHY RAROG
-========================= */
+
+
+
 
 .why-rarog__intro {
     max-width: 880px;
@@ -949,9 +949,9 @@
     line-height: 1.72;
 }
 
-/* =========================
-   APPROACH
-========================= */
+
+
+
 
 .home-approach::before {
     content: "";
@@ -1072,9 +1072,9 @@
     line-height: 1.62;
 }
 
-/* =========================
-   CONTACT
-========================= */
+
+
+
 
 .home-contact {
     overflow: hidden;
@@ -1160,9 +1160,9 @@
     box-shadow: 0 28px 76px rgba(20, 24, 18, 0.22);
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+
+
+
 
 @media (max-width: 1320px) {
     .home-side-nav {
@@ -1521,9 +1521,9 @@
     }
 }
 
-/* =========================
-   FINAL HERO HEIGHT / SPACING FIX
-========================= */
+
+
+
 
 .home-hero {
     min-height: 560px !important;
@@ -1549,7 +1549,7 @@
     margin-top: 26px !important;
 }
 
-/* tablets */
+
 @media (max-width: 1180px) {
     .home-hero {
         min-height: 520px !important;
@@ -1557,7 +1557,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 760px) {
     .home-hero {
         min-height: 500px !important;
@@ -1586,7 +1586,7 @@
     }
 }
 
-/* small mobile */
+
 @media (max-width: 480px) {
     .home-hero {
         min-height: 470px !important;
@@ -1605,9 +1605,9 @@
     }
 }
 
-/* =========================
-   STATEMENT STRIP WORD HOVERS
-========================= */
+
+
+
 
 .statement-strip__word {
     position: relative;
@@ -1656,15 +1656,15 @@
     background: rgba(11, 13, 10, 0.72);
 }
 
-/* чтобы было удобнее навести на слово */
+
 .statement-strip:hover .statement-strip__track {
     animation-play-state: paused;
 }
 
 
-/* =========================
-   ABOUT SECTION FINAL FIX
-========================= */
+
+
+
 
 .home-about {
     overflow: hidden;
@@ -1699,7 +1699,7 @@
     gap: 22px !important;
 }
 
-/* делаем зелёный на белом мягче и дороже */
+
 .home-about .section-kicker {
     color: rgba(23, 25, 21, 0.72) !important;
 }
@@ -1712,7 +1712,7 @@
     color: rgba(23, 25, 21, 0.9) !important;
 }
 
-/* карточки-пункты чище */
+
 .home-about__points {
     gap: 0 !important;
     margin: 6px 0 0 !important;
@@ -1762,7 +1762,7 @@
     color: rgba(23, 25, 21, 0.64) !important;
 }
 
-/* ссылка снизу не кислотная */
+
 .home-about .text-link {
     color: #171915 !important;
 }
@@ -1775,7 +1775,7 @@
     color: rgba(255, 231, 97, 0.95) !important;
 }
 
-/* бейдж на фото */
+
 .home-about__badge {
     left: 24px !important;
     right: 24px !important;
@@ -1789,9 +1789,9 @@
     color: rgba(255, 231, 97, 0.95) !important;
 }
 
-/* =========================
-   ABOUT RESPONSIVE
-========================= */
+
+
+
 
 @media (max-width: 1180px) {
     .home-about__grid {
@@ -1854,9 +1854,9 @@
     }
 }
 
-/* =========================
-   FINAL SIDE NAV VISIBILITY FIX
-========================= */
+
+
+
 
 .home-side-nav {
     position: fixed !important;
@@ -1967,18 +1967,18 @@
 
 
 
-/* чтобы на планшетах не мешала */
+
 @media (max-width: 1320px) {
     .home-side-nav {
         display: none !important;
     }
 }
 
-/* =========================
-   SIDE NAV LABEL FIX
-========================= */
 
-/* скрываем все названия по умолчанию */
+
+
+
+
 .home-side-nav__label {
     width: 104px !important;
     min-width: 104px !important;
@@ -1992,14 +1992,14 @@
     transform: translateX(10px) scale(0.96) !important;
 }
 
-/* не показывать все названия при наведении на всю навигацию */
+
 .home-side-nav:hover .home-side-nav__label {
     opacity: 0 !important;
     visibility: hidden !important;
     transform: translateX(10px) scale(0.96) !important;
 }
 
-/* показывать только название конкретной точки */
+
 .home-side-nav__link:hover .home-side-nav__label,
 .home-side-nav__link:focus-visible .home-side-nav__label {
     opacity: 1 !important;
@@ -2007,14 +2007,14 @@
     transform: translateX(0) scale(1) !important;
 }
 
-/* активная точка светится, но название не торчит постоянно */
+
 .home-side-nav__link.is-active .home-side-nav__label {
     opacity: 0 !important;
     visibility: hidden !important;
     transform: translateX(10px) scale(0.96) !important;
 }
 
-/* если активную точку навели — название показывается */
+
 .home-side-nav__link.is-active:hover .home-side-nav__label,
 .home-side-nav__link.is-active:focus-visible .home-side-nav__label {
     opacity: 1 !important;
@@ -2022,9 +2022,9 @@
     transform: translateX(0) scale(1) !important;
 }
 
-/* =========================
-   ABOUT ICONS / LINK FINAL FIX
-========================= */
+
+
+
 
 .home-about__badge {
     background: rgba(11, 13, 10, 0.82) !important;
@@ -2036,7 +2036,7 @@
     opacity: 0.96;
 }
 
-/* убираем жёлтый из иконок в about */
+
 .home-about__point>svg {
     width: 46px !important;
     height: 46px !important;
@@ -2069,7 +2069,7 @@
     align-items: start !important;
 }
 
-/* ссылка снизу — без обычной lucide-стрелки */
+
 .home-about .text-link--about {
     display: inline-flex !important;
     align-items: center !important;
@@ -2114,7 +2114,7 @@
     box-shadow: 0 14px 30px rgba(255, 231, 97, 0.28);
 }
 
-/* mobile */
+
 @media (max-width: 760px) {
     .home-about__point {
         grid-template-columns: 42px 1fr !important;
@@ -2133,10 +2133,10 @@
     }
 }
 
-/* =========================
-   SERVICE CARDS — STABLE BACKGROUND IMAGES
-   fixed for Swiper loop/clones
-========================= */
+
+
+
+
 
 .service-card--google {
     --service-card-bg: url("../assets/images/service-google-ads.jpg");
@@ -2168,7 +2168,7 @@
     --service-card-position: center;
 }
 
-/* один стабильный overlay для всех карточек */
+
 .service-card::after {
     content: "";
     position: absolute;
@@ -2193,20 +2193,20 @@
         filter var(--transition-slow);
 }
 
-/* убираем разные фильтры active/next, чтобы фото не прыгали */
+
 .service-card.swiper-slide-active::after,
 .service-card.swiper-slide-next::after,
 .service-card.swiper-slide-prev::after {
     filter: brightness(1.22) saturate(1.14) contrast(1.04) !important;
 }
 
-/* hover только на самой наведенной карточке */
+
 .service-card:hover::after {
     transform: scale(1.06);
     filter: brightness(1.28) saturate(1.17) contrast(1.05) !important;
 }
 
-/* swiper equal height */
+
 .home-services__swiper .swiper-wrapper {
     align-items: stretch !important;
 }
@@ -2215,7 +2215,7 @@
     height: auto !important;
 }
 
-/* card layout */
+
 .service-card {
     position: relative !important;
     isolation: isolate !important;
@@ -2233,7 +2233,7 @@
     box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28) !important;
 }
 
-/* photo background */
+
 .service-card::after {
     content: "";
     position: absolute;
@@ -2257,7 +2257,7 @@
         filter var(--transition-slow);
 }
 
-/* yellow hover glow */
+
 .service-card::before {
     content: "";
     position: absolute;
@@ -2286,7 +2286,7 @@
     filter: saturate(1.08) contrast(1.04);
 }
 
-/* icon fixed top */
+
 .service-card__icon {
     position: relative !important;
     z-index: 2 !important;
@@ -2308,7 +2308,7 @@
     stroke-width: 2.1 !important;
 }
 
-/* equal text area in every card */
+
 .service-card__content {
     position: relative !important;
     z-index: 2 !important;
@@ -2346,7 +2346,7 @@
     line-height: 1.65 !important;
 }
 
-/* link always bottom */
+
 .service-card__link {
     position: relative !important;
     z-index: 2 !important;
@@ -2395,7 +2395,7 @@
     transform: translateX(4px);
 }
 
-/* mobile */
+
 @media (max-width: 760px) {
     .service-card {
         min-height: 390px !important;
@@ -2416,9 +2416,9 @@
     }
 }
 
-/* =========================
-   GROWTH FLOW — MODERN REDESIGN
-========================= */
+
+
+
 
 .growth-flow {
     position: relative;
@@ -2440,7 +2440,7 @@
     z-index: 1;
 }
 
-/* top composition */
+
 .growth-flow__layout {
     display: grid;
     grid-template-columns: minmax(0, 0.92fr) minmax(360px, 0.72fr);
@@ -2461,7 +2461,7 @@
     margin-top: 24px;
 }
 
-/* photo as unusual visual object, not a card */
+
 .growth-flow__visual {
     position: relative;
     justify-self: end;
@@ -2512,7 +2512,7 @@
     pointer-events: none;
 }
 
-/* route lines */
+
 .growth-flow__route {
     position: relative;
     display: grid;
@@ -2624,7 +2624,7 @@
     line-height: 1.72;
 }
 
-/* responsive */
+
 @media (max-width: 1180px) {
     .growth-flow__layout {
         grid-template-columns: 1fr;
@@ -2691,9 +2691,9 @@
     }
 }
 
-/* =========================
-   GROWTH FLOW KICKER — EDITORIAL STYLE
-========================= */
+
+
+
 
 .growth-flow .section-kicker {
     position: relative;
@@ -2739,9 +2739,9 @@
             rgba(255, 231, 97, 0));
 }
 
-/* =========================
-   GLOBAL SECTION KICKER — EDITORIAL STYLE
-========================= */
+
+
+
 
 .section-kicker {
     position: relative !important;
@@ -2761,7 +2761,7 @@
     text-transform: uppercase !important;
 }
 
-/* линия слева */
+
 .section-kicker::before {
     content: "" !important;
     position: absolute !important;
@@ -2774,7 +2774,7 @@
     box-shadow: 0 0 18px rgba(255, 231, 97, 0.44) !important;
 }
 
-/* линия снизу */
+
 .section-kicker::after {
     content: "" !important;
     position: absolute !important;
@@ -2788,14 +2788,14 @@
             rgba(255, 231, 97, 0)) !important;
 }
 
-/* на светлых секциях */
+
 .section--light .section-kicker,
 .section--ivory .section-kicker,
 .growth-flow .section-kicker {
     color: #171915 !important;
 }
 
-/* на тёмных секциях */
+
 .section--dark .section-kicker,
 .section--deep .section-kicker,
 .home-services .section-kicker,
@@ -2805,17 +2805,17 @@
 }
 
 
-/* =========================
-   PROCESS LINE — PREMIUM RAISED HOVER
-   dark, same size, no inner card
-========================= */
+
+
+
+
 
 .process-line {
     overflow: visible !important;
     isolation: isolate;
 }
 
-/* базовое состояние */
+
 .process-line__item {
     position: relative !important;
     z-index: 1;
@@ -2829,7 +2829,7 @@
         filter 280ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* убираем старые псевдо-рамки, если остались */
+
 .process-line__item::before,
 .process-line__item::after {
     content: "";
@@ -2839,7 +2839,7 @@
     transition: opacity 280ms ease;
 }
 
-/* тёмная глубина по размеру самой карточки */
+
 .process-line__item::before {
     inset: 0;
     z-index: -1;
@@ -2850,7 +2850,7 @@
             rgba(13, 14, 11, 0.98) 100%);
 }
 
-/* тонкий верхний свет, без вложенной карточки */
+
 .process-line__item::after {
     left: 0;
     right: 0;
@@ -2863,7 +2863,7 @@
             transparent);
 }
 
-/* сам hover: размер тот же, только выдвижение вверх */
+
 .process-line__item:hover {
     z-index: 8;
     transform: translateY(-10px) !important;
@@ -2880,7 +2880,7 @@
     opacity: 1;
 }
 
-/* иконка красиво усиливается, но цвет не прыгает */
+
 .process-line__icon {
     transition:
         filter 280ms ease,
@@ -2893,19 +2893,19 @@
         drop-shadow(0 12px 18px rgba(0, 0, 0, 0.34)) drop-shadow(0 0 18px rgba(255, 231, 97, 0.28));
 }
 
-/* текст просто становится чуть четче */
+
 .process-line__item:hover h3,
 .process-line__item:hover p,
 .process-line__item:hover .process-line__label {
     filter: brightness(1.08);
 }
 
-/* чтобы при наведении соседние линии не выглядели грязно */
+
 .process-line__item:hover:not(:last-child) {
     border-right-color: rgba(255, 231, 97, 0.14) !important;
 }
 
-/* на мобилке мягче */
+
 @media (max-width: 760px) {
     .process-line {
         overflow: hidden !important;
@@ -2919,10 +2919,10 @@
     }
 }
 
-/* =========================
-   WHY RAROG — LIGHT COMPASS FIELD
-   no cards, no numbers, no nested blocks
-========================= */
+
+
+
+
 
 .why-rarog-field {
     position: relative;
@@ -2957,7 +2957,7 @@
     line-height: 1.82;
 }
 
-/* one unified board, not separate cards */
+
 .why-rarog-field__board {
     position: relative;
     display: grid;
@@ -2968,7 +2968,7 @@
     border-bottom: 1px solid rgba(20, 24, 18, 0.14);
 }
 
-/* central cross lines */
+
 .why-rarog-field__board::before,
 .why-rarog-field__board::after {
     content: "";
@@ -2992,7 +2992,7 @@
     height: 1px;
 }
 
-/* center mark */
+
 .why-rarog-field__center {
     position: absolute;
     left: 50%;
@@ -3025,7 +3025,7 @@
     letter-spacing: 0.24em;
 }
 
-/* quadrants */
+
 .why-rarog-field__item {
     position: relative;
     z-index: 3;
@@ -3042,7 +3042,7 @@
         filter var(--transition-base);
 }
 
-/* soft hover field, not a card */
+
 .why-rarog-field__item::before {
     content: "";
     position: absolute;
@@ -3100,7 +3100,7 @@
     --hover-y: 80%;
 }
 
-/* big clean icons */
+
 .why-rarog-field__item>svg {
     width: 42px;
     height: 42px;
@@ -3139,7 +3139,7 @@
     line-height: 1.72;
 }
 
-/* asymmetry so it does not feel like normal grid cards */
+
 .why-rarog-field__item--two,
 .why-rarog-field__item--four {
     padding-left: clamp(38px, 5vw, 64px);
@@ -3151,7 +3151,7 @@
     padding-top: clamp(38px, 5vw, 60px);
 }
 
-/* responsive */
+
 @media (max-width: 980px) {
     .why-rarog-field__board {
         grid-template-columns: 1fr;
@@ -3214,16 +3214,16 @@
     }
 }
 
-/* =========================
-   WHY RAROG FIELD — ICON TOP RIGHT + LOWER HEIGHT + NEW HOVER
-========================= */
 
-/* делаем секцию ниже по высоте */
+
+
+
+
 .why-rarog-field__board {
     min-height: 500px !important;
 }
 
-/* каждая зона меньше по высоте */
+
 .why-rarog-field__item {
     position: relative !important;
     min-height: 250px !important;
@@ -3231,7 +3231,7 @@
     justify-content: flex-end !important;
 }
 
-/* иконка справа сверху, стиль самой иконки не меняем */
+
 .why-rarog-field__item>svg {
     position: absolute !important;
     top: clamp(24px, 3vw, 36px) !important;
@@ -3239,7 +3239,7 @@
     margin-bottom: 0 !important;
 }
 
-/* чтобы текст не залезал под иконку */
+
 .why-rarog-field__item h3 {
     max-width: 390px !important;
     padding-right: 74px !important;
@@ -3250,14 +3250,14 @@
     padding-bottom: 14px !important;
 }
 
-/* убираем старый hover с сильным свечением/изменением иконки */
+
 .why-rarog-field__item:hover>svg {
     color: rgba(23, 25, 21, 0.72) !important;
     transform: none !important;
     filter: none !important;
 }
 
-/* новый hover — мягкий premium-surface без карточка-в-карточке */
+
 .why-rarog-field__item::before {
     content: "" !important;
     position: absolute !important;
@@ -3274,7 +3274,7 @@
         box-shadow var(--transition-base) !important;
 }
 
-/* тонкая акцентная линия снизу */
+
 .why-rarog-field__item::after {
     left: clamp(26px, 3.2vw, 38px) !important;
     right: clamp(26px, 3.2vw, 38px) !important;
@@ -3299,7 +3299,7 @@
     box-shadow: 0 0 18px rgba(255, 231, 97, 0.24) !important;
 }
 
-/* hover самой зоны — без движения, просто глубина */
+
 .why-rarog-field__item:hover {
     background: transparent !important;
     filter: none !important;
@@ -3308,20 +3308,20 @@
         inset 0 -24px 44px rgba(20, 24, 18, 0.035) !important;
 }
 
-/* нижние зоны тоже делаем компактнее */
+
 .why-rarog-field__item--three,
 .why-rarog-field__item--four {
     justify-content: flex-end !important;
     padding-top: clamp(26px, 3.2vw, 38px) !important;
 }
 
-/* чтобы вторая и четвертая зона не были слишком сдвинуты */
+
 .why-rarog-field__item--two,
 .why-rarog-field__item--four {
     padding-left: clamp(30px, 3.6vw, 46px) !important;
 }
 
-/* tablet/mobile */
+
 @media (max-width: 980px) {
     .why-rarog-field__board {
         min-height: 0 !important;
@@ -3368,9 +3368,9 @@
     }
 }
 
-/* =========================
-   APPROACH SWITCHER — FULL REDESIGN
-========================= */
+
+
+
 
 .approach-switch {
     position: relative;
@@ -3416,7 +3416,7 @@
     align-items: stretch;
 }
 
-/* left switch card */
+
 .approach-switch__nav {
     display: grid;
     gap: 10px;
@@ -3530,7 +3530,7 @@
     color: rgba(248, 246, 239, 0.72);
 }
 
-/* right changing card */
+
 .approach-switch__panel-card {
     position: relative;
     min-height: 470px;
@@ -3637,7 +3637,7 @@
     font-weight: 750;
 }
 
-/* bottom disclaimer + CTA */
+
 .approach-switch__bottom {
     display: flex;
     align-items: center;
@@ -3655,7 +3655,7 @@
     line-height: 1.7;
 }
 
-/* responsive */
+
 @media (max-width: 1080px) {
     .approach-switch__grid {
         grid-template-columns: 1fr;
@@ -3721,9 +3721,9 @@
     }
 }
 
-/* =========================
-   APPROACH LENS — NEW INTERACTIVE DESIGN
-========================= */
+
+
+
 
 .approach-lens {
     position: relative;
@@ -3762,7 +3762,7 @@
     max-width: 720px;
 }
 
-/* layout */
+
 .approach-lens__shell {
     display: grid;
     grid-template-columns: minmax(260px, 0.38fr) minmax(0, 1fr);
@@ -3770,7 +3770,7 @@
     align-items: stretch;
 }
 
-/* left tabs - not cards, more like control rail */
+
 .approach-lens__tabs {
     display: grid;
     align-content: stretch;
@@ -3845,7 +3845,7 @@
     letter-spacing: -0.045em;
 }
 
-/* right stage */
+
 .approach-lens__stage {
     position: relative;
     min-height: 500px;
@@ -3858,7 +3858,7 @@
     box-shadow: var(--shadow-soft);
 }
 
-/* IMPORTANT: this fixes switching */
+
 .approach-lens__panel[hidden] {
     display: none !important;
 }
@@ -3886,7 +3886,7 @@
     }
 }
 
-/* huge background word */
+
 .approach-lens__word {
     position: relative;
     color: rgba(248, 246, 239, 0.055);
@@ -3908,7 +3908,7 @@
     opacity: 0.75;
 }
 
-/* content */
+
 .approach-lens__content {
     position: relative;
     z-index: 1;
@@ -3963,7 +3963,7 @@
     font-weight: 750;
 }
 
-/* bottom */
+
 .approach-lens__footer {
     display: flex;
     align-items: center;
@@ -3981,7 +3981,7 @@
     line-height: 1.7;
 }
 
-/* responsive */
+
 @media (max-width: 1080px) {
     .approach-lens__shell {
         grid-template-columns: 1fr;
@@ -4079,11 +4079,11 @@
     }
 }
 
-/* =========================
-   APPROACH PANEL — FULL WIDTH CONTENT FIX
-========================= */
 
-/* если используешь новый вариант approach-lens */
+
+
+
+
 .approach-lens__panel {
     display: flex !important;
     flex-direction: column !important;
@@ -4093,7 +4093,7 @@
     padding: clamp(30px, 5vw, 58px) !important;
 }
 
-/* большое слово больше не занимает отдельную колонку */
+
 .approach-lens__word {
     position: absolute !important;
     left: clamp(26px, 4vw, 54px) !important;
@@ -4110,7 +4110,7 @@
     display: none !important;
 }
 
-/* текст теперь занимает всю карточку */
+
 .approach-lens__content {
     position: relative !important;
     z-index: 2 !important;
@@ -4130,7 +4130,7 @@
     max-width: 100% !important;
 }
 
-/* если у тебя всё ещё стоит старый approach-switch */
+
 .approach-switch__panel {
     width: 100% !important;
     max-width: none !important;
@@ -4149,13 +4149,13 @@
     max-width: 100% !important;
 }
 
-/* обязательно, чтобы hidden работал */
+
 .approach-lens__panel[hidden],
 .approach-switch__panel[hidden] {
     display: none !important;
 }
 
-/* mobile */
+
 @media (max-width: 760px) {
 
     .approach-lens__panel,
@@ -4175,9 +4175,9 @@
     }
 }
 
-/* =========================
-   CONTACT VISUAL — INTEGRATED PANEL
-========================= */
+
+
+
 
 .home-contact__visual--integrated {
     position: relative !important;
@@ -4264,7 +4264,7 @@
     color: var(--color-accent) !important;
 }
 
-/* mobile */
+
 @media (max-width: 760px) {
     .home-contact__visual--integrated {
         min-height: 330px !important;
@@ -4284,9 +4284,9 @@
     }
 }
 
-/* =========================
-   HOME FAQ — FULL WIDTH NO CARD VERSION
-========================= */
+
+
+
 
 .home-faq {
     position: relative;
@@ -4298,7 +4298,7 @@
         var(--color-bg-light) !important;
 }
 
-/* большой фоновой текст оставляем, но мягче */
+
 .home-faq::before {
     content: "FAQ";
     position: absolute;
@@ -4314,12 +4314,12 @@
     pointer-events: none;
 }
 
-/* вся секция без левой/правой колонки */
+
 .home-faq__grid {
     display: block !important;
 }
 
-/* верхний текст */
+
 .home-faq__intro {
     position: relative !important;
     top: auto !important;
@@ -4345,7 +4345,7 @@
     line-height: 1.8 !important;
 }
 
-/* убираем ощущение карточки полностью */
+
 .home-faq__accordion {
     width: 100% !important;
     max-width: none !important;
@@ -4357,13 +4357,13 @@
     box-shadow: none !important;
 }
 
-/* убираем старые фоны/подложки */
+
 .home-faq__accordion::before,
 .home-faq__accordion::after {
     display: none !important;
 }
 
-/* вопросы как широкие editorial-строки */
+
 .home-faq__item {
     position: relative !important;
     overflow: visible !important;
@@ -4421,7 +4421,7 @@
     transform: scaleX(1) !important;
 }
 
-/* вопрос на всю ширину */
+
 .home-faq__button {
     position: relative !important;
     z-index: 1 !important;
@@ -4447,7 +4447,7 @@
     letter-spacing: -0.065em !important;
 }
 
-/* стрелка без ощущения кнопки-карточки */
+
 .home-faq__button svg {
     justify-self: end !important;
     width: 42px !important;
@@ -4478,7 +4478,7 @@
     box-shadow: 0 14px 30px rgba(255, 231, 97, 0.22) !important;
 }
 
-/* ответ тоже шире */
+
 .home-faq__panel {
     position: relative !important;
     z-index: 1 !important;
@@ -4499,7 +4499,7 @@
     line-height: 1.78 !important;
 }
 
-/* mobile */
+
 @media (max-width: 760px) {
     .home-faq::before {
         top: 44px;
@@ -4544,11 +4544,11 @@
         font-size: 0.94rem !important;
     }
 }
-/* =========================
-   HOME FAQ — CLEAN PREMIUM HOVER
-========================= */
 
-/* убираем старую большую hover-заливку */
+
+
+
+
 .home-faq__item::before {
     content: "" !important;
     position: absolute !important;
@@ -4569,7 +4569,7 @@
     pointer-events: none !important;
 }
 
-/* линия под вопросом */
+
 .home-faq__item::after {
     content: "" !important;
     position: absolute !important;
@@ -4587,7 +4587,7 @@
     transition: transform var(--transition-base) !important;
 }
 
-/* сам hover без заливки */
+
 .home-faq__item:hover,
 .home-faq__item.is-open {
     background: transparent !important;
@@ -4604,14 +4604,14 @@
     transform: scaleX(1) !important;
 }
 
-/* текст не прыгает, только становится чуть насыщеннее */
+
 .home-faq__item:hover .home-faq__button span,
 .home-faq__item.is-open .home-faq__button span {
     color: #0B0D0A !important;
     text-shadow: 0 12px 32px rgba(20, 24, 18, 0.08);
 }
 
-/* стрелка — основной hover-акцент */
+
 .home-faq__button svg {
     background: transparent !important;
     transition:
@@ -4639,21 +4639,21 @@
         0 14px 30px rgba(255, 231, 97, 0.22) !important;
 }
 
-/* ответ открывается аккуратно, без карточки */
+
 .home-faq__panel p {
     border-left-color: var(--color-accent) !important;
     background: transparent !important;
 }
-/* =========================
-   HOME FAQ — HOVER LINE ONLY BOTTOM
-========================= */
 
-/* убираем линию сбоку */
+
+
+
+
 .home-faq__item::before {
     display: none !important;
 }
 
-/* нижняя линия вместо боковой */
+
 .home-faq__item::after {
     content: "" !important;
     position: absolute !important;
@@ -4673,21 +4673,21 @@
     transition: transform var(--transition-base) !important;
 }
 
-/* показываем нижнюю линию при hover/open */
+
 .home-faq__item:hover::after,
 .home-faq__item.is-open::after {
     transform: scaleX(1) !important;
 }
 
-/* hover без бокового акцента и без заливки */
+
 .home-faq__item:hover,
 .home-faq__item.is-open {
     background: transparent !important;
 }
 
-/* =========================
-   STATEMENT STRIP — REAL MARQUEE FIX
-========================= */
+
+
+
 
 .statement-strip {
     position: relative !important;
@@ -4749,12 +4749,12 @@
     }
 }
 
-/* hover pause */
+
 .statement-strip:hover .statement-strip__track {
     animation-play-state: paused !important;
 }
 
-/* tablet */
+
 @media (max-width: 900px) {
     .statement-strip__track {
         animation-duration: 18s !important;
@@ -4774,7 +4774,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 520px) {
     .statement-strip__track {
         animation-duration: 15s !important;
@@ -4795,9 +4795,9 @@
     }
 }
 
-/* =========================
-   SERVICE CARD ICON TOP RIGHT
-========================= */
+
+
+
 
 .service-card {
     position: relative !important;
@@ -4842,12 +4842,12 @@
         0 0 0 7px rgba(255, 231, 97, 0.12) !important;
 }
 
-/* чтобы текст не залезал под иконку */
+
 .service-card__content {
     margin-top: 0 !important;
 }
 
-/* mobile */
+
 @media (max-width: 760px) {
     .service-card {
         padding-top: 76px !important;
@@ -4867,9 +4867,9 @@
     }
 }
 
-/* =========================
-   PROCESS LINE — TABLET/MOBILE COMPACT ICON POSITION
-========================= */
+
+
+
 
 @media (max-width: 1180px) {
     .process-line__item {
@@ -4928,27 +4928,27 @@
     }
 }
 
-/* =========================
-   MOBILE MENU — HIDE SCROLLBAR VISUALLY
-========================= */
+
+
+
 
 .mobile-menu,
 .mobile-menu__body {
     overflow-y: auto !important;
     overflow-x: hidden !important;
 
-    /* Firefox */
+    
     scrollbar-width: none !important;
 
-    /* IE / old Edge */
+    
     -ms-overflow-style: none !important;
 
-    /* smooth mobile scrolling */
+    
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
 }
 
-/* Chrome / Safari / Edge */
+
 .mobile-menu::-webkit-scrollbar,
 .mobile-menu__body::-webkit-scrollbar {
     width: 0 !important;
@@ -4956,18 +4956,18 @@
     display: none !important;
 }
 
-/* чтобы страница под меню не скроллилась */
+
 body.menu-open {
     overflow: hidden !important;
 }
 
-/* =========================
-   MOBILE HEADINGS — FULL WIDTH BALANCED
-========================= */
+
+
+
 
 @media (max-width: 760px) {
 
-    /* HERO H1 */
+    
     .home-hero__content {
         width: 100% !important;
         max-width: 100% !important;
@@ -5002,7 +5002,7 @@ body.menu-open {
         justify-content: center !important;
     }
 
-    /* ALL SECTION H2 */
+    
     .section-title,
     .section-head .section-title,
     .growth-flow .section-title,
@@ -5019,7 +5019,7 @@ body.menu-open {
         letter-spacing: -0.06em !important;
     }
 
-    /* чтобы верхние блоки секций тоже центрировались */
+    
     .section-head,
     .section-head__content,
     .growth-flow__intro,
@@ -5052,7 +5052,7 @@ body.menu-open {
     }
 }
 
-/* очень маленькие телефоны */
+
 @media (max-width: 480px) {
     .home-hero__title {
         font-size: clamp(2.18rem, 13.5vw, 3.35rem) !important;
@@ -5065,11 +5065,11 @@ body.menu-open {
     }
 }
 
-/* =========================
-   SERVICE CARDS — BRIGHTER BACKGROUND PHOTOS
-========================= */
 
-/* делаем фото в карточках светлее и виднее */
+
+
+
+
 .service-card::after {
     background:
         linear-gradient(180deg,
@@ -5087,17 +5087,17 @@ body.menu-open {
     filter: brightness(1.18) saturate(1.12) contrast(1.03) !important;
 }
 
-/* активная карточка — ещё чуть выразительнее */
+
 .service-card.swiper-slide-active::after {
     filter: brightness(1.26) saturate(1.16) contrast(1.04) !important;
 }
 
-/* next карточка тоже ярче, чтобы не была мутной */
+
 .service-card.swiper-slide-next::after {
     filter: brightness(1.22) saturate(1.14) contrast(1.04) !important;
 }
 
-/* при hover фото не затемняется, а становится сочнее */
+
 .service-card:hover::after {
     filter: brightness(1.3) saturate(1.18) contrast(1.06) !important;
 }

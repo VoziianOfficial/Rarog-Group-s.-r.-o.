@@ -1,6 +1,6 @@
-/* =========================
-   LEGAL HERO
-========================= */
+
+
+
 
 .legal-hero {
     position: relative;
@@ -62,9 +62,9 @@
     margin-top: 28px;
 }
 
-/* =========================
-   LEGAL LAYOUT
-========================= */
+
+
+
 
 .legal-section {
     overflow: visible;
@@ -196,9 +196,9 @@
     stroke-width: 2.2;
 }
 
-/* =========================
-   LEGAL CONTENT
-========================= */
+
+
+
 
 .legal-content {
     display: grid;
@@ -286,9 +286,9 @@
     text-decoration-color: var(--color-text-main);
 }
 
-/* =========================
-   LEGAL FOOTER ACTIVE STATES
-========================= */
+
+
+
 
 body[data-legal-page="privacy-policy"] a[href="./privacy-policy.html"],
 body[data-legal-page="terms-of-service"] a[href="./terms-of-service.html"],
@@ -296,9 +296,9 @@ body[data-legal-page="cookie-policy"] a[href="./cookie-policy.html"] {
     text-decoration-color: currentColor;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+
+
+
 
 @media (max-width: 1180px) {
     .legal-layout {
