@@ -2763,8 +2763,7 @@
 .section--deep .section-kicker,
 .home-services .section-kicker,
 .home-process .section-kicker,
-.home-approach .section-kicker,
-.home-contact .section-kicker {
+.home-approach .section-kicker{
     color: #F8F6EF !important;
 }
 
@@ -4136,5 +4135,114 @@
     .approach-lens__content p,
     .approach-switch__panel p {
         max-width: 100% !important;
+    }
+}
+
+/* =========================
+   CONTACT VISUAL — INTEGRATED PANEL
+========================= */
+
+.home-contact__visual--integrated {
+    position: relative !important;
+    max-width: 100% !important;
+    min-height: 360px !important;
+    margin-top: 10px !important;
+    overflow: hidden !important;
+    border-radius: 32px !important;
+    border: 1px solid rgba(20, 24, 18, 0.12) !important;
+    background: #111 !important;
+    box-shadow: 0 26px 70px rgba(20, 24, 18, 0.14) !important;
+}
+
+.home-contact__visual--integrated img {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 360px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    transform: scale(1.02);
+    transition:
+        transform var(--transition-slow),
+        filter var(--transition-slow);
+}
+
+.home-contact__visual--integrated:hover img {
+    transform: scale(1.06);
+    filter: saturate(1.05) contrast(1.03);
+}
+
+.home-contact__visual--integrated::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg,
+            rgba(11, 13, 10, 0.05) 0%,
+            rgba(11, 13, 10, 0.38) 46%,
+            rgba(11, 13, 10, 0.88) 100%),
+        linear-gradient(90deg,
+            rgba(255, 231, 97, 0.1),
+            transparent 54%) !important;
+    pointer-events: none;
+}
+
+.home-contact__visual-content {
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+    z-index: 2;
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 22px;
+    background: rgba(11, 13, 10, 0.76);
+    backdrop-filter: blur(18px);
+}
+
+.home-contact__visual-label {
+    margin-bottom: 12px;
+    color: var(--color-accent);
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.home-contact__visual-content .home-contact__info {
+    display: grid !important;
+    gap: 10px !important;
+    margin-top: 0 !important;
+}
+
+.home-contact__visual-content .home-contact__info-link {
+    color: rgba(248, 246, 239, 0.84) !important;
+}
+
+.home-contact__visual-content .home-contact__info-link:hover {
+    color: #ffffff !important;
+}
+
+.home-contact__visual-content .home-contact__info-link svg {
+    color: var(--color-accent) !important;
+}
+
+/* mobile */
+@media (max-width: 760px) {
+    .home-contact__visual--integrated {
+        min-height: 330px !important;
+        border-radius: 26px !important;
+    }
+
+    .home-contact__visual--integrated img {
+        min-height: 330px !important;
+    }
+
+    .home-contact__visual-content {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        padding: 15px;
+        border-radius: 18px;
     }
 }
