@@ -1,6 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap");
 
 :root {
+    --font-heading: "Space Grotesk", "Manrope", "Inter", Arial, sans-serif;
+    --font-body: "Inter", "Manrope", Arial, sans-serif;
+
+    --container: 1180px;
+    --container-wide: 1360px;
+
+    --header-height: 82px;
+    --radius-sm: 14px;
+    --radius-lg: 28px;
+    --transition-base: 260ms ease;
+    --transition-slow: 420ms cubic-bezier(0.22, 1, 0.36, 1);
+
     --color-bg-dark: #0B0D0A;
     --color-bg-dark-2: #12160F;
     --color-bg-deep: #050605;
@@ -45,6 +57,7 @@
 html {
     min-width: 320px;
     scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-height) + 18px);
     overflow-x: hidden;
     background: var(--color-bg-dark);
 }
@@ -162,6 +175,7 @@ figure {
 /* =========================
    GLOBAL LAYOUT
 ========================= */
+
 html {
     overflow-x: hidden;
 }
@@ -180,6 +194,12 @@ body {
 main {
     width: 100%;
     overflow: visible;
+}
+
+section[id],
+.page-hero,
+.legal-hero {
+    scroll-margin-top: calc(var(--header-height) + 18px);
 }
 
 .container {
@@ -526,6 +546,7 @@ main {
 /* =========================
    HEADER
 ========================= */
+
 .site-header {
     position: fixed;
     top: 0;
@@ -535,6 +556,7 @@ main {
     width: 100%;
     border-bottom: 1px solid transparent;
     background: rgba(11, 13, 10, 0.76);
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     transition:
         background var(--transition-base),
