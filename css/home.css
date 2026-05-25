@@ -4890,3 +4890,36 @@
         padding-right: 46px !important;
     }
 }
+
+/* =========================
+   MOBILE MENU — HIDE SCROLLBAR VISUALLY
+========================= */
+
+.mobile-menu,
+.mobile-menu__body {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+
+    /* Firefox */
+    scrollbar-width: none !important;
+
+    /* IE / old Edge */
+    -ms-overflow-style: none !important;
+
+    /* smooth mobile scrolling */
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+}
+
+/* Chrome / Safari / Edge */
+.mobile-menu::-webkit-scrollbar,
+.mobile-menu__body::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+    display: none !important;
+}
+
+/* чтобы страница под меню не скроллилась */
+body.menu-open {
+    overflow: hidden !important;
+}
