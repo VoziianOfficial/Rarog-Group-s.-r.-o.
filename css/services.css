@@ -1742,27 +1742,27 @@
 
 /* фото для каждой service-page */
 .service-focus-strip--google {
-    --service-focus-image: url("../assets/images/service-google-ads.jpg");
+    --service-focus-image: url("../assets/images/service-card.jpg");
 }
 
 .service-focus-strip--seo {
-    --service-focus-image: url("../assets/images/service-seo.jpg");
+    --service-focus-image: url("../assets/images/service-card.jpg");
 }
 
 .service-focus-strip--social {
-    --service-focus-image: url("../assets/images/service-social-media.jpg");
+    --service-focus-image: url("../assets/images/service-card.jpg");
 }
 
 .service-focus-strip--web {
-    --service-focus-image: url("../assets/images/service-web-design.jpg");
+    --service-focus-image: url("../assets/images/service-card.jpg");
 }
 
 .service-focus-strip--conversion {
-    --service-focus-image: url("../assets/images/conversion-boost-detail.jpg");
+    --service-focus-image: url("../assets/images/service-card.jpg");
 }
 
 .service-focus-strip--local {
-    --service-focus-image: url("../assets/images/service-local-seo.jpg");
+    --service-focus-image: url("../assets/images/service-card.jpg");
 }
 
 /* tablet */
@@ -1932,5 +1932,42 @@
         box-shadow:
             0 16px 34px rgba(0, 0, 0, 0.26),
             inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+    }
+}
+
+/* =========================
+   GOOGLE SERVICE FOCUS STRIP — BRIGHTER PHOTO
+========================= */
+
+/* делаем само фото ярче */
+.service-focus-strip--google::before {
+    filter: brightness(1.08) saturate(1.16) contrast(1.05) !important;
+    opacity: 1 !important;
+    transform: scale(1.02) !important;
+}
+
+/* ослабляем затемнение, чтобы графика была виднее */
+.service-focus-strip--google::after {
+    background:
+        linear-gradient(90deg,
+            rgba(5, 6, 5, 0.78) 0%,
+            rgba(5, 6, 5, 0.56) 42%,
+            rgba(5, 6, 5, 0.18) 100%),
+        linear-gradient(180deg,
+            rgba(5, 6, 5, 0.06) 0%,
+            rgba(5, 6, 5, 0.48) 100%) !important;
+}
+
+/* на мобилке оставляем чуть темнее, чтобы текст читался */
+@media (max-width: 760px) {
+    .service-focus-strip--google::before {
+        filter: brightness(0.92) saturate(1.12) contrast(1.04) !important;
+    }
+
+    .service-focus-strip--google::after {
+        background:
+            linear-gradient(180deg,
+                rgba(5, 6, 5, 0.48) 0%,
+                rgba(5, 6, 5, 0.82) 100%) !important;
     }
 }
