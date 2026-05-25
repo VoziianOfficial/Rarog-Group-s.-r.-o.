@@ -2882,3 +2882,452 @@
             0 0 0 1px rgba(255, 231, 97, 0.12) !important;
     }
 }
+
+/* =========================
+   WHY RAROG — LIGHT COMPASS FIELD
+   no cards, no numbers, no nested blocks
+========================= */
+
+.why-rarog-field {
+    position: relative;
+    overflow: hidden;
+    color: var(--color-text-main);
+    background:
+        radial-gradient(circle at 10% 18%, rgba(255, 231, 97, 0.14), transparent 28rem),
+        radial-gradient(circle at 88% 70%, rgba(255, 231, 97, 0.08), transparent 26rem),
+        var(--color-bg-light);
+}
+
+.why-rarog-field .container {
+    position: relative;
+    z-index: 1;
+}
+
+.why-rarog-field__head {
+    display: grid;
+    gap: 20px;
+    max-width: 980px;
+    margin-bottom: clamp(42px, 6vw, 72px);
+}
+
+.why-rarog-field__head .section-title {
+    max-width: 900px;
+}
+
+.why-rarog-field__lead {
+    max-width: 680px;
+    color: rgba(23, 25, 21, 0.66);
+    font-size: clamp(1rem, 1.2vw, 1.12rem);
+    line-height: 1.82;
+}
+
+/* one unified board, not separate cards */
+.why-rarog-field__board {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    min-height: 620px;
+    overflow: hidden;
+    border-top: 1px solid rgba(20, 24, 18, 0.14);
+    border-bottom: 1px solid rgba(20, 24, 18, 0.14);
+}
+
+/* central cross lines */
+.why-rarog-field__board::before,
+.why-rarog-field__board::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    background: rgba(20, 24, 18, 0.12);
+}
+
+.why-rarog-field__board::before {
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+}
+
+.why-rarog-field__board::after {
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+}
+
+/* center mark */
+.why-rarog-field__center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 132px;
+    height: 132px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background:
+        radial-gradient(circle, rgba(255, 231, 97, 0.22), rgba(255, 231, 97, 0.04) 62%, transparent 64%);
+    pointer-events: none;
+}
+
+.why-rarog-field__center::before {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border: 1px solid rgba(20, 24, 18, 0.16);
+    border-radius: 50%;
+}
+
+.why-rarog-field__center span {
+    color: rgba(23, 25, 21, 0.22);
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    font-weight: 850;
+    letter-spacing: 0.24em;
+}
+
+/* quadrants */
+.why-rarog-field__item {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 310px;
+    padding: clamp(28px, 4vw, 46px);
+    isolation: isolate;
+    overflow: hidden;
+    background: transparent;
+    transition:
+        background var(--transition-base),
+        filter var(--transition-base);
+}
+
+/* soft hover field, not a card */
+.why-rarog-field__item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0;
+    background:
+        radial-gradient(circle at var(--hover-x, 50%) var(--hover-y, 50%), rgba(255, 231, 97, 0.2), transparent 32rem),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.36), rgba(255, 255, 255, 0));
+    transition: opacity var(--transition-base);
+}
+
+.why-rarog-field__item::after {
+    content: "";
+    position: absolute;
+    left: clamp(28px, 4vw, 46px);
+    bottom: clamp(24px, 3vw, 38px);
+    width: 76px;
+    height: 2px;
+    transform: scaleX(0.34);
+    transform-origin: left;
+    border-radius: 999px;
+    background: var(--color-accent);
+    transition:
+        transform var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.why-rarog-field__item:hover::before {
+    opacity: 1;
+}
+
+.why-rarog-field__item:hover::after {
+    transform: scaleX(1);
+    box-shadow: 0 0 20px rgba(255, 231, 97, 0.45);
+}
+
+.why-rarog-field__item--one {
+    --hover-x: 20%;
+    --hover-y: 20%;
+}
+
+.why-rarog-field__item--two {
+    --hover-x: 80%;
+    --hover-y: 20%;
+}
+
+.why-rarog-field__item--three {
+    --hover-x: 20%;
+    --hover-y: 80%;
+}
+
+.why-rarog-field__item--four {
+    --hover-x: 80%;
+    --hover-y: 80%;
+}
+
+/* big clean icons */
+.why-rarog-field__item>svg {
+    width: 42px;
+    height: 42px;
+    margin-bottom: clamp(38px, 5vw, 74px);
+    color: rgba(23, 25, 21, 0.72);
+    stroke-width: 1.75;
+    transition:
+        color var(--transition-base),
+        transform var(--transition-base),
+        filter var(--transition-base);
+}
+
+.why-rarog-field__item:hover>svg {
+    color: #171915;
+    transform: rotate(-4deg) scale(1.08);
+    filter: drop-shadow(0 12px 20px rgba(20, 24, 18, 0.12));
+}
+
+.why-rarog-field__item h3 {
+    max-width: 360px;
+    margin: 0 0 14px;
+    color: #171915;
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 2.25vw, 2.45rem);
+    font-weight: 650;
+    line-height: 0.98;
+    letter-spacing: -0.06em;
+}
+
+.why-rarog-field__item p {
+    max-width: 420px;
+    margin: 0;
+    padding-bottom: 22px;
+    color: rgba(23, 25, 21, 0.64);
+    font-size: 0.98rem;
+    line-height: 1.72;
+}
+
+/* asymmetry so it does not feel like normal grid cards */
+.why-rarog-field__item--two,
+.why-rarog-field__item--four {
+    padding-left: clamp(38px, 5vw, 64px);
+}
+
+.why-rarog-field__item--three,
+.why-rarog-field__item--four {
+    justify-content: flex-start;
+    padding-top: clamp(38px, 5vw, 60px);
+}
+
+/* responsive */
+@media (max-width: 980px) {
+    .why-rarog-field__board {
+        grid-template-columns: 1fr;
+        min-height: 0;
+    }
+
+    .why-rarog-field__board::before,
+    .why-rarog-field__board::after,
+    .why-rarog-field__center {
+        display: none;
+    }
+
+    .why-rarog-field__item {
+        min-height: auto;
+        padding: 28px 0;
+        border-top: 1px solid rgba(20, 24, 18, 0.14);
+    }
+
+    .why-rarog-field__item:first-child {
+        border-top: 0;
+    }
+
+    .why-rarog-field__item--two,
+    .why-rarog-field__item--four {
+        padding-left: 0;
+    }
+
+    .why-rarog-field__item--three,
+    .why-rarog-field__item--four {
+        justify-content: flex-end;
+        padding-top: 28px;
+    }
+
+    .why-rarog-field__item>svg {
+        margin-bottom: 28px;
+    }
+
+    .why-rarog-field__item::after {
+        left: 0;
+        bottom: 22px;
+    }
+
+    .why-rarog-field__item p {
+        padding-bottom: 18px;
+    }
+}
+
+@media (max-width: 560px) {
+    .why-rarog-field__item h3 {
+        font-size: clamp(1.35rem, 8vw, 1.9rem);
+    }
+
+    .why-rarog-field__item p {
+        font-size: 0.93rem;
+    }
+
+    .why-rarog-field__item>svg {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* =========================
+   WHY RAROG FIELD — ICON TOP RIGHT + LOWER HEIGHT + NEW HOVER
+========================= */
+
+/* делаем секцию ниже по высоте */
+.why-rarog-field__board {
+    min-height: 500px !important;
+}
+
+/* каждая зона меньше по высоте */
+.why-rarog-field__item {
+    position: relative !important;
+    min-height: 250px !important;
+    padding: clamp(26px, 3.2vw, 38px) !important;
+    justify-content: flex-end !important;
+}
+
+/* иконка справа сверху, стиль самой иконки не меняем */
+.why-rarog-field__item>svg {
+    position: absolute !important;
+    top: clamp(24px, 3vw, 36px) !important;
+    right: clamp(24px, 3vw, 38px) !important;
+    margin-bottom: 0 !important;
+}
+
+/* чтобы текст не залезал под иконку */
+.why-rarog-field__item h3 {
+    max-width: 390px !important;
+    padding-right: 74px !important;
+}
+
+.why-rarog-field__item p {
+    max-width: 430px !important;
+    padding-bottom: 14px !important;
+}
+
+/* убираем старый hover с сильным свечением/изменением иконки */
+.why-rarog-field__item:hover>svg {
+    color: rgba(23, 25, 21, 0.72) !important;
+    transform: none !important;
+    filter: none !important;
+}
+
+/* новый hover — мягкий premium-surface без карточка-в-карточке */
+.why-rarog-field__item::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: -1 !important;
+    opacity: 0 !important;
+    background:
+        linear-gradient(135deg,
+            rgba(255, 255, 255, 0.34),
+            rgba(255, 255, 255, 0.08) 44%,
+            rgba(255, 231, 97, 0.08)) !important;
+    transition:
+        opacity var(--transition-base),
+        box-shadow var(--transition-base) !important;
+}
+
+/* тонкая акцентная линия снизу */
+.why-rarog-field__item::after {
+    left: clamp(26px, 3.2vw, 38px) !important;
+    right: clamp(26px, 3.2vw, 38px) !important;
+    bottom: 0 !important;
+    width: auto !important;
+    height: 2px !important;
+    transform: scaleX(0) !important;
+    transform-origin: left !important;
+    background: linear-gradient(90deg,
+            rgba(23, 25, 21, 0.9),
+            rgba(255, 231, 97, 0.95),
+            rgba(255, 231, 97, 0)) !important;
+    box-shadow: none !important;
+}
+
+.why-rarog-field__item:hover::before {
+    opacity: 1 !important;
+}
+
+.why-rarog-field__item:hover::after {
+    transform: scaleX(1) !important;
+    box-shadow: 0 0 18px rgba(255, 231, 97, 0.24) !important;
+}
+
+/* hover самой зоны — без движения, просто глубина */
+.why-rarog-field__item:hover {
+    background: transparent !important;
+    filter: none !important;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 -24px 44px rgba(20, 24, 18, 0.035) !important;
+}
+
+/* нижние зоны тоже делаем компактнее */
+.why-rarog-field__item--three,
+.why-rarog-field__item--four {
+    justify-content: flex-end !important;
+    padding-top: clamp(26px, 3.2vw, 38px) !important;
+}
+
+/* чтобы вторая и четвертая зона не были слишком сдвинуты */
+.why-rarog-field__item--two,
+.why-rarog-field__item--four {
+    padding-left: clamp(30px, 3.6vw, 46px) !important;
+}
+
+/* tablet/mobile */
+@media (max-width: 980px) {
+    .why-rarog-field__board {
+        min-height: 0 !important;
+    }
+
+    .why-rarog-field__item {
+        min-height: 190px !important;
+        padding: 24px 0 !important;
+    }
+
+    .why-rarog-field__item>svg {
+        top: 24px !important;
+        right: 0 !important;
+    }
+
+    .why-rarog-field__item h3 {
+        padding-right: 64px !important;
+    }
+
+    .why-rarog-field__item::after {
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+    }
+
+    .why-rarog-field__item--two,
+    .why-rarog-field__item--four {
+        padding-left: 0 !important;
+    }
+}
+
+@media (max-width: 560px) {
+    .why-rarog-field__item {
+        min-height: 170px !important;
+    }
+
+    .why-rarog-field__item h3 {
+        padding-right: 54px !important;
+    }
+
+    .why-rarog-field__item>svg {
+        width: 34px !important;
+        height: 34px !important;
+    }
+}
