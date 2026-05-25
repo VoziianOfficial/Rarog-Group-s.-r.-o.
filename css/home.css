@@ -4507,3 +4507,143 @@
         font-size: 0.94rem !important;
     }
 }
+/* =========================
+   HOME FAQ — CLEAN PREMIUM HOVER
+========================= */
+
+/* убираем старую большую hover-заливку */
+.home-faq__item::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 22px !important;
+    bottom: 22px !important;
+    width: 3px !important;
+    z-index: 0 !important;
+    opacity: 0 !important;
+    transform: scaleY(0.35) !important;
+    transform-origin: center !important;
+    border-radius: 999px !important;
+    background: var(--color-accent) !important;
+    box-shadow: 0 0 22px rgba(255, 231, 97, 0.42) !important;
+    transition:
+        opacity var(--transition-base),
+        transform var(--transition-base) !important;
+    pointer-events: none !important;
+}
+
+/* линия под вопросом */
+.home-faq__item::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: -1px !important;
+    width: auto !important;
+    height: 1px !important;
+    transform: scaleX(0) !important;
+    transform-origin: left !important;
+    background: linear-gradient(90deg,
+            rgba(255, 231, 97, 0.95),
+            rgba(255, 231, 97, 0.32),
+            rgba(255, 231, 97, 0)) !important;
+    transition: transform var(--transition-base) !important;
+}
+
+/* сам hover без заливки */
+.home-faq__item:hover,
+.home-faq__item.is-open {
+    background: transparent !important;
+}
+
+.home-faq__item:hover::before,
+.home-faq__item.is-open::before {
+    opacity: 1 !important;
+    transform: scaleY(1) !important;
+}
+
+.home-faq__item:hover::after,
+.home-faq__item.is-open::after {
+    transform: scaleX(1) !important;
+}
+
+/* текст не прыгает, только становится чуть насыщеннее */
+.home-faq__item:hover .home-faq__button span,
+.home-faq__item.is-open .home-faq__button span {
+    color: #0B0D0A !important;
+    text-shadow: 0 12px 32px rgba(20, 24, 18, 0.08);
+}
+
+/* стрелка — основной hover-акцент */
+.home-faq__button svg {
+    background: transparent !important;
+    transition:
+        transform var(--transition-base),
+        background var(--transition-base),
+        border-color var(--transition-base),
+        color var(--transition-base),
+        box-shadow var(--transition-base) !important;
+}
+
+.home-faq__item:hover .home-faq__button svg {
+    color: #0B0D0A !important;
+    background: rgba(255, 231, 97, 0.24) !important;
+    border-color: rgba(255, 231, 97, 0.78) !important;
+    box-shadow: 0 0 0 6px rgba(255, 231, 97, 0.12) !important;
+}
+
+.home-faq__item.is-open .home-faq__button svg {
+    color: #0B0D0A !important;
+    background: var(--color-accent) !important;
+    border-color: var(--color-accent) !important;
+    transform: rotate(180deg) !important;
+    box-shadow:
+        0 0 0 7px rgba(255, 231, 97, 0.14),
+        0 14px 30px rgba(255, 231, 97, 0.22) !important;
+}
+
+/* ответ открывается аккуратно, без карточки */
+.home-faq__panel p {
+    border-left-color: var(--color-accent) !important;
+    background: transparent !important;
+}
+/* =========================
+   HOME FAQ — HOVER LINE ONLY BOTTOM
+========================= */
+
+/* убираем линию сбоку */
+.home-faq__item::before {
+    display: none !important;
+}
+
+/* нижняя линия вместо боковой */
+.home-faq__item::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: -1px !important;
+    width: auto !important;
+    height: 2px !important;
+    transform: scaleX(0) !important;
+    transform-origin: left !important;
+    border-radius: 999px !important;
+    background: linear-gradient(90deg,
+            var(--color-accent),
+            rgba(255, 231, 97, 0.48),
+            rgba(255, 231, 97, 0)) !important;
+    box-shadow: 0 0 20px rgba(255, 231, 97, 0.26) !important;
+    transition: transform var(--transition-base) !important;
+}
+
+/* показываем нижнюю линию при hover/open */
+.home-faq__item:hover::after,
+.home-faq__item.is-open::after {
+    transform: scaleX(1) !important;
+}
+
+/* hover без бокового акцента и без заливки */
+.home-faq__item:hover,
+.home-faq__item.is-open {
+    background: transparent !important;
+}
