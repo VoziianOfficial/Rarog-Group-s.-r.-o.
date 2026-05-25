@@ -765,3 +765,57 @@
     }
 }
 
+/* =========================
+   SERVICE HERO — SOFT PHOTO VISIBILITY FIX
+========================= */
+
+.service-hero {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+/* мягко делаем фото виднее, без пересвета */
+.service-hero img,
+.service-hero .page-hero__bg img,
+.service-hero .page-hero__image,
+.service-hero .page-hero__bg-image {
+    filter: brightness(1.12) saturate(1.06) contrast(1.02) !important;
+}
+
+/* если фото задано через background/pseudo */
+.service-hero::before,
+.service-hero .page-hero__bg::before {
+    filter: brightness(1.12) saturate(1.06) contrast(1.02) !important;
+}
+
+/* overlay оставляем тёмным, но не таким плотным */
+.service-hero::after,
+.service-hero .page-hero__bg::after,
+.service-hero .page-hero__overlay {
+    background:
+        linear-gradient(90deg,
+            rgba(5, 6, 5, 0.82) 0%,
+            rgba(5, 6, 5, 0.64) 44%,
+            rgba(5, 6, 5, 0.36) 100%),
+        linear-gradient(180deg,
+            rgba(5, 6, 5, 0.14) 0%,
+            rgba(5, 6, 5, 0.58) 100%) !important;
+}
+
+/* если общий page-hero overlay слишком сильный */
+.page-hero.service-hero::after,
+.page-hero.service-hero::before {
+    opacity: 0.9 !important;
+}
+
+/* текст читаемый, но без тяжелой тени */
+.service-hero .page-hero__title,
+.service-hero h1 {
+    text-shadow: 0 3px 22px rgba(0, 0, 0, 0.48) !important;
+}
+
+.service-hero .page-hero__text,
+.service-hero p {
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.38) !important;
+}
+
