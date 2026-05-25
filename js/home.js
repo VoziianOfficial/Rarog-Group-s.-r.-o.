@@ -48,6 +48,7 @@
         initContactForm();
         initCookieBanner();
         initApproachSwitcher();
+        initFaqAccordion();
     }
 
     function qs(selector, scope = document) {
@@ -689,6 +690,46 @@
         }
 
         return true;
+    }
+
+    function initFaqAccordion() {
+        const accordion = document.querySelector("[data-faq-accordion]");
+
+        if (!accordion) return;
+
+        const items = Array.from(accordion.querySelectorAll(".home-faq__item"));
+
+        items.forEach((item) => {
+            const button = item.querySelector(".home-faq__button");
+            const panel = item.querySelector(".home-faq__panel");
+
+            if (!button || !panel) return;
+
+            button.addEventListener("click", () => {
+                const isOpen = item.classList.contains("is-open");
+
+                items.forEach((currentItem) => {
+                    const currentButton = currentItem.querySelector(".home-faq__button");
+                    const currentPanel = currentItem.querySelector(".home-faq__panel");
+
+                    currentItem.classList.remove("is-open");
+
+                    if (currentButton) {
+                        currentButton.setAttribute("aria-expanded", "false");
+                    }
+
+                    if (currentPanel) {
+                        currentPanel.hidden = true;
+                    }
+                });
+
+                if (!isOpen) {
+                    item.classList.add("is-open");
+                    button.setAttribute("aria-expanded", "true");
+                    panel.hidden = false;
+                }
+            });
+        });
     }
 })();
 
