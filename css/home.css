@@ -5102,3 +5102,32 @@ body.menu-open {
     filter: brightness(1.3) saturate(1.18) contrast(1.06) !important;
 }
 
+
+
+.text-link--about {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.text-link--about .text-link__arrow {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 18px !important;
+    height: 18px !important;
+    flex: 0 0 auto !important;
+    color: currentColor !important;
+    stroke: currentColor !important;
+}
+
+.text-link--about:hover .text-link__arrow {
+    transform: translate(2px, -2px) !important;
+}
+
+@media (max-width: 760px) {
+    .text-link--about .text-link__arrow {
+        width: 17px !important;
+        height: 17px !important;
+    }
+}
