@@ -1,0 +1,9 @@
+{
+    "name": "rarog-group/website",
+    "description": "Website contact form mailer for rarogads.com",
+    "type": "project",
+    "require": {
+        "php": "^8.0",
+        "phpmailer/phpmailer": "^6.9"
+    }
+}

@@ -1,8 +1,22 @@
 "use strict";
 
 window.SITE_CONFIG = {
+    siteUrl: "https://rarogads.com",
+    domain: "rarogads.com",
     companyName: "Rarog Group, s. r. o.",
     brandName: "Rarog Group",
+    legalForm: "Spol. s r. o.",
+    registeredDate: "28.09.2012",
+
+    companyDetails: {
+        registrationNumber: "46836454",
+        taxId: "2023606112",
+        vatId: "SK2023606112",
+        registration:
+            "Obchodny register Mestskeho sudu Bratislava III, oddiel: Sro, vlozka c. 84407/B",
+        businessFocus:
+            "Marketing consulting, Google Ads services, advertising reporting, campaign monitoring, account management review, and performance data synchronization."
+    },
 
     email: {
         value: "support@rarogads.com",
@@ -399,6 +413,57 @@ window.SITE_CONFIG = {
                         "Yes. It can help service businesses strengthen location-based relevance, profile clarity, and local search presentation."
                 }
             ]
+        },
+
+        {
+            id: "google-ads-api-use-case",
+            title: "Google Ads API Use Case",
+            shortTitle: "API Use Case",
+            href: "google-ads-api-use-case.html",
+            icon: "workflow",
+            heroImage: "./assets/images/google-ads-hero.jpg",
+            detailImage: "./assets/images/google-ads-detail.jpg",
+            kicker: "Authorized account workflow",
+            summary:
+                "Reporting, monitoring, and authorized account data workflow for Google Ads support and performance synchronization.",
+            pageTitle: "Google Ads API Use Case",
+            pageIntro:
+                "Rarog Group uses a Google Ads API workflow to support reporting, campaign monitoring, account management review, and performance data synchronization for authorized advertising accounts.",
+            improves: [
+                "Reporting dashboards and account visibility",
+                "Campaign monitoring and delivery review",
+                "Authorized account management support",
+                "Budget and performance synchronization",
+                "Optimization review and internal reporting"
+            ],
+            matters:
+                "The workflow is designed for authorized Google Ads accounts and supports business reporting needs without requesting Google Ads passwords through the website.",
+            method: [
+                "Use authorized Google Ads access for reporting workflows.",
+                "Review campaign, ad group, keyword, and performance data.",
+                "Synchronize core spend and conversion indicators.",
+                "Support internal account review and client communication.",
+                "Limit processing to reporting, monitoring, and account support."
+            ],
+            deliverables: [
+                "Reporting dashboard inputs",
+                "Campaign monitoring notes",
+                "Account review support",
+                "Performance synchronization structure",
+                "Internal reporting workflow"
+            ],
+            faq: [
+                {
+                    question: "Why does Rarog Group need Google Ads API access?",
+                    answer:
+                        "The workflow supports authorized reporting, campaign monitoring, account review, and performance data synchronization for Google Ads service delivery."
+                },
+                {
+                    question: "Does the API workflow create campaigns automatically?",
+                    answer:
+                        "The current use case is focused on reporting, monitoring, account review, and performance synchronization rather than automated campaign creation through a public tool."
+                }
+            ]
         }
     ],
 
@@ -421,58 +486,74 @@ window.SITE_CONFIG = {
         "index.html": {
             title: "Rarog Group | Digital Marketing & Advertising Agency in Bratislava",
             description:
-                "Rarog Group, s. r. o. is a Bratislava-based digital marketing and advertising agency focused on Google Ads, SEO, social media marketing, web design, conversion optimization, and local SEO."
+                "Rarog Group, s. r. o. is a Bratislava-based digital marketing and advertising agency focused on Google Ads, SEO, social media marketing, web design, conversion optimization, and local SEO.",
+            canonical: "https://rarogads.com/"
         },
         "google-ads.html": {
             title: "Google Ads Strategy | Rarog Group",
             description:
-                "Structured Google Ads campaign planning, paid search strategy, intent mapping, landing page alignment, and conversion tracking direction from Rarog Group."
+                "Structured Google Ads campaign planning, paid search strategy, intent mapping, landing page alignment, and conversion tracking direction from Rarog Group.",
+            canonical: "https://rarogads.com/google-ads.html"
         },
         "seo-optimization.html": {
             title: "SEO Optimization | Rarog Group",
             description:
-                "SEO optimization for stronger technical structure, metadata clarity, content relevance, crawlability, and long-term search visibility."
+                "SEO optimization for stronger technical structure, metadata clarity, content relevance, crawlability, and long-term search visibility.",
+            canonical: "https://rarogads.com/seo-optimization.html"
         },
         "social-media-marketing.html": {
             title: "Social Media Marketing | Rarog Group",
             description:
-                "Social media marketing strategy, content planning, paid social direction, audience targeting, creative messaging, and reporting support."
+                "Social media marketing strategy, content planning, paid social direction, audience targeting, creative messaging, and reporting support.",
+            canonical: "https://rarogads.com/social-media-marketing.html"
         },
         "web-design.html": {
             title: "Web Design | Rarog Group",
             description:
-                "Responsive, clean, conversion-aware web design direction for modern businesses that need stronger digital experiences and clearer contact flows."
+                "Responsive, clean, conversion-aware web design direction for modern businesses that need stronger digital experiences and clearer contact flows.",
+            canonical: "https://rarogads.com/web-design.html"
         },
         "conversion-boost.html": {
             title: "Conversion Boost | Rarog Group",
             description:
-                "Conversion optimization direction for landing pages, CTAs, forms, user journeys, analytics signals, and clearer action paths."
+                "Conversion optimization direction for landing pages, CTAs, forms, user journeys, analytics signals, and clearer action paths.",
+            canonical: "https://rarogads.com/conversion-boost.html"
         },
         "local-seo.html": {
             title: "Local SEO | Rarog Group",
             description:
-                "Local SEO support for Google Business Profile clarity, local landing pages, citation consistency, service area content, and map visibility signals."
+                "Local SEO support for Google Business Profile clarity, local landing pages, citation consistency, service area content, and map visibility signals.",
+            canonical: "https://rarogads.com/local-seo.html"
+        },
+        "google-ads-api-use-case.html": {
+            title: "Google Ads API Use Case | Rarog Group",
+            description:
+                "Google Ads API use case for Rarog Group: authorized advertising reporting, campaign monitoring, account management review, and performance data synchronization.",
+            canonical: "https://rarogads.com/google-ads-api-use-case.html"
         },
         "privacy-policy.html": {
             title: "Privacy Policy | Rarog Group",
             description:
-                "Read the Privacy Policy for Rarog Group, s. r. o., including information about contact form data, cookies, analytics, retention, and user rights."
+                "Read the Privacy Policy for Rarog Group, s. r. o., including information about contact form data, cookies, analytics, retention, and user rights.",
+            canonical: "https://rarogads.com/privacy-policy.html"
         },
         "terms-of-service.html": {
             title: "Terms of Service | Rarog Group",
             description:
-                "Read the Terms of Service for the Rarog Group website, marketing service information, third-party platforms, intellectual property, and liability limitations."
+                "Read the Terms of Service for the Rarog Group website, marketing service information, third-party platforms, intellectual property, and liability limitations.",
+            canonical: "https://rarogads.com/terms-of-service.html"
         },
         "cookie-policy.html": {
             title: "Cookie Policy | Rarog Group",
             description:
-                "Read the Cookie Policy for Rarog Group, including essential cookies, analytics cookies, preference cookies, and cookie management options."
+                "Read the Cookie Policy for Rarog Group, including essential cookies, analytics cookies, preference cookies, and cookie management options.",
+            canonical: "https://rarogads.com/cookie-policy.html"
         }
     },
 
     footer: {
         description:
-            "Rarog Group, s. r. o. is a Bratislava-based digital marketing and advertising agency focused on paid campaigns, search visibility, social media presence, conversion-aware websites, and measurable growth systems.",
+            "Rarog Group, s. r. o. supports Google Ads services, marketing consulting, campaign reporting, website improvement, and performance-focused digital communication.",
         copyright:
             "© 2026 Rarog Group, s. r. o. All rights reserved."
     },
@@ -488,9 +569,13 @@ window.SITE_CONFIG = {
 
     form: {
         successMessage:
-            "Thank you. Your message has been prepared successfully. Rarog Group will review your request and respond by email.",
+            "Thank you — your request was sent to Rarog Group. The team will review it and respond by email.",
         errorMessage:
             "Please complete all required fields and confirm the privacy consent before submitting.",
+        requestErrorMessage:
+            "We could not send your request right now. Please email Rarog Group directly at support@rarogads.com.",
+        submitText: "Send request",
+        submittingText: "Sending request...",
         servicesPlaceholder: "Select a service",
         services: [
             "Google Ads",
@@ -498,7 +583,8 @@ window.SITE_CONFIG = {
             "Social Media Marketing",
             "Web Design",
             "Conversion Boost",
-            "Local SEO"
+            "Local SEO",
+            "Google Ads API Use Case"
         ]
     },
 

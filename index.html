@@ -8,6 +8,7 @@
     <title>Rarog Group | Digital Marketing & Advertising Agency in Bratislava</title>
     <meta name="description"
         content="Rarog Group, s. r. o. is a Bratislava-based digital marketing and advertising agency focused on Google Ads, SEO, social media marketing, web design, conversion optimization, and local SEO." />
+    <link rel="canonical" href="https://rarogads.com/" />
 
 <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg?v=12" />
 <link rel="alternate icon" type="image/x-icon" href="./assets/icons/favicon.ico?v=12" />
@@ -1063,6 +1064,80 @@
             
 
 
+<section class="section section--dark home-support" aria-labelledby="supportTitle">
+    <div class="container">
+        <div class="home-support__head">
+            <p class="section-kicker">Business focus</p>
+
+            <h2 class="section-title" id="supportTitle">
+                Who Rarog Group supports
+            </h2>
+
+            <p class="section-text">
+                Rarog Group supports businesses that need clearer campaign structure, measurable reporting, and more
+                reliable decision-making across digital channels.
+            </p>
+        </div>
+
+        <div class="home-support__grid" aria-label="Who Rarog Group supports">
+            <article class="home-support__card">
+                <i data-lucide="building-2" aria-hidden="true"></i>
+                <h3>Local service businesses</h3>
+                <p>Teams that need stronger search visibility and more structured lead-generation support.</p>
+            </article>
+
+            <article class="home-support__card">
+                <i data-lucide="briefcase-business" aria-hidden="true"></i>
+                <h3>B2B service companies</h3>
+                <p>Companies that need clearer positioning, reporting visibility, and campaign review discipline.</p>
+            </article>
+
+            <article class="home-support__card">
+                <i data-lucide="shopping-cart" aria-hidden="true"></i>
+                <h3>E-commerce and lead generation websites</h3>
+                <p>Businesses that need better alignment between ads, landing pages, conversion tracking, and spend.</p>
+            </article>
+
+            <article class="home-support__card">
+                <i data-lucide="badge-check" aria-hidden="true"></i>
+                <h3>Professional service providers</h3>
+                <p>Firms that need more credible digital communication and a sharper path from click to inquiry.</p>
+            </article>
+
+            <article class="home-support__card">
+                <i data-lucide="chart-column" aria-hidden="true"></i>
+                <h3>Companies that need clearer campaign reporting</h3>
+                <p>Organizations looking for cleaner performance summaries, account monitoring, and budget visibility.</p>
+            </article>
+
+            <article class="home-support__card">
+                <i data-lucide="clipboard-list" aria-hidden="true"></i>
+                <h3>Teams that need structured Google Ads account reviews</h3>
+                <p>Businesses that want organized review workflows before making optimization or management decisions.</p>
+            </article>
+        </div>
+
+        <div class="home-support__engagements">
+            <div>
+                <p class="section-kicker">Service scope examples</p>
+                <h3>Example engagement types</h3>
+            </div>
+
+            <div class="home-support__chips" aria-label="Example engagement types">
+                <span>Google Ads account structure review</span>
+                <span>Reporting and conversion tracking audit</span>
+                <span>Landing page and campaign alignment review</span>
+                <span>Campaign performance review</span>
+                <span>Budget and spend visibility setup</span>
+                <span>Search term and keyword quality review</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+            
+
+
             <section class="section section--ivory home-contact" id="contact" data-section="contact">
                 <div class="container">
                     <div class="home-contact__grid">
@@ -1075,9 +1150,26 @@
 
                             <p class="section-text">
                                 Use the form to share your service focus, website or campaign challenge, and the
-                                type of marketing direction you need. This form does not send data to a backend in
-                                this static version; it validates the request and shows a success message.
+                                type of marketing direction you need. Submitted requests are sent to Rarog Group for
+                                review, and the team can respond by email.
                             </p>
+
+                            <div class="home-contact__credibility" aria-label="Rarog Group company details">
+                                <div class="home-contact__credibility-item">
+                                    <span>Company</span>
+                                    <strong>Rarog Group, s. r. o.</strong>
+                                </div>
+
+                                <div class="home-contact__credibility-item">
+                                    <span>Registration</span>
+                                    <strong data-company-registration>Obchodny register Mestskeho sudu Bratislava III, oddiel: Sro, vlozka c. 84407/B</strong>
+                                </div>
+
+                                <div class="home-contact__credibility-item">
+                                    <span>Tax details</span>
+                                    <strong>IČO: <span data-company-ico>46836454</span> · DIČ: <span data-company-dic>2023606112</span> · VAT ID: <span data-company-vat>SK2023606112</span></strong>
+                                </div>
+                            </div>
 
                 <div class="home-contact__visual home-contact__visual--integrated">
                     <img src="./assets/images/contact-visual.jpg" alt="Modern marketing workspace with laptop and planning notes"
@@ -1105,7 +1197,7 @@
                         </div>
 
                         <div class="home-contact__form-card">
-                            <form class="contact-form" novalidate data-contact-form>
+                            <form class="contact-form" action="contact.php" method="POST" novalidate data-contact-form>
                                 <div class="form-grid">
                                     <div class="form-field">
                                         <label class="form-label" for="fullName">Full Name</label>
@@ -1115,20 +1207,19 @@
 
                                     <div class="form-field">
                                         <label class="form-label" for="emailAddress">Email Address</label>
-                                        <input class="form-input" id="emailAddress" name="emailAddress" type="email"
+                                        <input class="form-input" id="emailAddress" name="email" type="email"
                                             autocomplete="email" placeholder="you@example.com" required />
                                     </div>
 
                                     <div class="form-field">
                                         <label class="form-label" for="phoneNumber">Phone Number</label>
-                                        <input class="form-input" id="phoneNumber" name="phoneNumber" type="tel"
-                                            autocomplete="tel" placeholder="+421..." required />
+                                        <input class="form-input" id="phoneNumber" name="phone" type="tel"
+                                            autocomplete="tel" placeholder="+421..." />
                                     </div>
 
                                     <div class="form-field">
                                         <label class="form-label" for="selectedService">Selected Service</label>
-                                        <select class="form-select" id="selectedService" name="selectedService"
-                                            required>
+                                        <select class="form-select" id="selectedService" name="service">
                                             <option value="">Select a service</option>
                                             <option value="Google Ads">Google Ads</option>
                                             <option value="SEO Optimization">SEO Optimization</option>
@@ -1136,8 +1227,13 @@
                                             <option value="Web Design">Web Design</option>
                                             <option value="Conversion Boost">Conversion Boost</option>
                                             <option value="Local SEO">Local SEO</option>
+                                            <option value="Google Ads API Use Case">Google Ads API Use Case</option>
                                         </select>
                                     </div>
+
+                                    <input type="hidden" name="sourcePage" value="Rarog Group homepage contact form" />
+                                    <input type="text" name="companyWebsite" tabindex="-1" autocomplete="off"
+                                        class="form-honeypot" aria-hidden="true" />
 
                                     <div class="form-field form-field--full">
                                         <label class="form-label" for="message">Message</label>
@@ -1147,7 +1243,7 @@
                                     </div>
 
                                     <label class="form-consent">
-                                        <input type="checkbox" name="policyConsent" required />
+                                        <input type="checkbox" name="privacyConsent" required />
                                         <span class="form-consent__box" aria-hidden="true"></span>
                                         <span>
                                             I agree that Rarog Group may review the information submitted through this
@@ -1163,7 +1259,7 @@
                                         data-form-success></div>
 
                                     <button class="btn btn-primary form-field--full" type="submit">
-                                        Send request
+                                        <span data-submit-label>Send request</span>
                                         <i data-lucide="send" aria-hidden="true"></i>
                                     </button>
                                 </div>

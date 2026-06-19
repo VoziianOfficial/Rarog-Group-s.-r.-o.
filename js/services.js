@@ -29,6 +29,8 @@
 
     function initServicePage() {
         applyConfigData();
+        injectApiUseCaseLinks();
+        injectCompanyDetails();
         applyPageMeta();
         initIcons();
         initHeaderState();
@@ -91,11 +93,18 @@
 
             descriptionTag.setAttribute("content", meta.description);
         }
+
+        const canonical = meta.canonical || getCanonicalUrl(fileName);
+        upsertLinkTag("canonical", canonical);
+        upsertMetaTag("property", "og:title", meta.title || document.title);
+        upsertMetaTag("property", "og:description", meta.description || "");
+        upsertMetaTag("property", "og:url", canonical);
     }
 
     function applyConfigData() {
         const email = config.email || {};
         const address = config.address || {};
+        const companyDetails = config.companyDetails || {};
         const footer = config.footer || {};
         const cookieBanner = config.cookieBanner || {};
 
@@ -139,6 +148,24 @@
                 "Černockého 9983/5A, Bratislava - mestská časť Rača, 831 53, Slovenská republika";
         });
 
+        qsa("[data-company-ico]").forEach((element) => {
+            element.textContent = companyDetails.registrationNumber || "46836454";
+        });
+
+        qsa("[data-company-dic]").forEach((element) => {
+            element.textContent = companyDetails.taxId || "2023606112";
+        });
+
+        qsa("[data-company-vat]").forEach((element) => {
+            element.textContent = companyDetails.vatId || "SK2023606112";
+        });
+
+        qsa("[data-company-registration]").forEach((element) => {
+            element.textContent =
+                companyDetails.registration ||
+                "Obchodny register Mestskeho sudu Bratislava III, oddiel: Sro, vlozka c. 84407/B";
+        });
+
         qsa("[data-footer-text]").forEach((element) => {
             if (footer.description) {
                 element.textContent = footer.description;
@@ -161,6 +188,146 @@
             if (cookieBanner.text) {
                 element.textContent = cookieBanner.text;
             }
+        });
+    }
+
+    function getCanonicalUrl(fileName) {
+        const siteUrl = String(config.siteUrl || "https://rarogads.com").replace(/\/+$/, "");
+        return fileName === "index.html" ? `${siteUrl}/` : `${siteUrl}/${fileName}`;
+    }
+
+    function upsertMetaTag(attributeName, attributeValue, content) {
+        if (!content) return;
+
+        let tag = qs(`meta[${attributeName}="${attributeValue}"]`);
+
+        if (!tag) {
+            tag = document.createElement("meta");
+            tag.setAttribute(attributeName, attributeValue);
+            document.head.appendChild(tag);
+        }
+
+        tag.setAttribute("content", content);
+    }
+
+    function upsertLinkTag(rel, href) {
+        if (!href) return;
+
+        let tag = qs(`link[rel="${rel}"]`);
+
+        if (!tag) {
+            tag = document.createElement("link");
+            tag.setAttribute("rel", rel);
+            document.head.appendChild(tag);
+        }
+
+        tag.setAttribute("href", href);
+    }
+
+    function getApiUseCaseService() {
+        return (config.services || []).find(
+            (service) => service.href === "google-ads-api-use-case.html"
+        );
+    }
+
+    function injectApiUseCaseLinks() {
+        const apiService = getApiUseCaseService();
+
+        if (!apiService) return;
+
+        const href = `./${apiService.href}`;
+
+        qsa(".services-dropdown__grid").forEach((grid) => {
+            if (grid.querySelector(`[href="${href}"], [href="${apiService.href}"]`)) return;
+
+            const link = document.createElement("a");
+            link.className = "services-dropdown__link";
+            link.href = href;
+            link.innerHTML = `
+                <span class="services-dropdown__icon">
+                    <i data-lucide="${apiService.icon || "workflow"}" aria-hidden="true"></i>
+                </span>
+                <span>
+                    <span class="services-dropdown__title">${apiService.title}</span>
+                    <span class="services-dropdown__text">Reporting, monitoring, and authorized account data workflow.</span>
+                </span>
+            `;
+
+            grid.appendChild(link);
+        });
+
+        qsa(".mobile-menu__services-grid").forEach((grid) => {
+            if (grid.querySelector(`[href="${href}"], [href="${apiService.href}"]`)) return;
+
+            const link = document.createElement("a");
+            link.className = "mobile-menu__service-link";
+            link.href = href;
+            link.setAttribute("data-mobile-menu-link", "");
+            link.innerHTML = `
+                <i data-lucide="${apiService.icon || "workflow"}" aria-hidden="true"></i>
+                <span>${apiService.title}</span>
+                <i class="arrow-icon" data-lucide="arrow-up-right" aria-hidden="true"></i>
+            `;
+
+            grid.appendChild(link);
+        });
+
+        qsa(".service-mini-nav").forEach((nav) => {
+            if (nav.querySelector(`[href="${href}"], [href="${apiService.href}"]`)) return;
+
+            const link = document.createElement("a");
+            link.className = "service-mini-nav__link";
+            link.href = href;
+            link.textContent = "API Use Case";
+            nav.appendChild(link);
+        });
+
+        qsa(".site-footer__column").forEach((column) => {
+            const title = qs(".site-footer__title", column);
+            const list = qs(".site-footer__list", column);
+
+            if (!title || !list || title.textContent.trim() !== "Services") return;
+            if (list.querySelector(`[href="${href}"], [href="${apiService.href}"]`)) return;
+
+            const item = document.createElement("li");
+            item.innerHTML = `<a class="site-footer__link" href="${href}">${apiService.title}</a>`;
+            list.appendChild(item);
+        });
+    }
+
+    function injectCompanyDetails() {
+        const companyDetails = config.companyDetails || {};
+        const email = config.email || {};
+        const footerCardHtml = `
+            <div class="site-footer__credentials" data-footer-company-card>
+                <p><strong>${config.companyName || "Rarog Group, s. r. o."}</strong></p>
+                <p>IČO: ${companyDetails.registrationNumber || "46836454"}</p>
+                <p>DIČ: ${companyDetails.taxId || "2023606112"}</p>
+                <p>VAT ID: ${companyDetails.vatId || "SK2023606112"}</p>
+                <p>${companyDetails.registration || ""}</p>
+                <p><a href="${email.href || "mailto:support@rarogads.com"}">${email.value || "support@rarogads.com"}</a></p>
+            </div>
+        `;
+
+        qsa(".site-footer__brand").forEach((brand) => {
+            if (qs("[data-footer-company-card]", brand)) return;
+            brand.insertAdjacentHTML("beforeend", footerCardHtml);
+        });
+
+        qsa(".legal-contact-card").forEach((card) => {
+            if (qs("[data-legal-company-card]", card)) return;
+
+            card.insertAdjacentHTML(
+                "beforeend",
+                `
+                    <div class="legal-contact-card__meta" data-legal-company-card>
+                        <p><strong>IČO:</strong> ${companyDetails.registrationNumber || "46836454"}</p>
+                        <p><strong>DIČ:</strong> ${companyDetails.taxId || "2023606112"}</p>
+                        <p><strong>VAT ID:</strong> ${companyDetails.vatId || "SK2023606112"}</p>
+                        <p><strong>Registration:</strong> ${companyDetails.registration || ""}</p>
+                    </div>
+                `
+            );
         });
     }
 

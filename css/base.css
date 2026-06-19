@@ -1268,6 +1268,26 @@ section[id],
     line-height: 1.8;
 }
 
+.site-footer__credentials {
+    display: grid;
+    gap: 6px;
+    max-width: 420px;
+    padding-top: 4px;
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+.site-footer__credentials strong {
+    color: var(--color-text-light);
+}
+
+.site-footer__credentials a {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 .site-footer__column {
     display: grid;
     align-content: start;
